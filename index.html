@@ -976,7 +976,7 @@ function subRow(){
 }
 function sheetTiers(why){
   const pr=ACC.prices||{lite:150,coach:450};
-  const card=(k,feat,badge)=>{ const own=!ACC.trial && ACC[k] && ACC[k]*1000>Date.now(), cur=own;
+  const card=(k,feat,badge)=>{ const own=!ACC.demo && ACC[k] && ACC[k]*1000>Date.now(), cur=own;
     return '<div class="tier'+(cur?" cur":"")+'">'+(badge?'<span class="badge">'+badge+'</span>':"")+
       '<div class="tier-h"><h3>'+PNAME(k)+'</h3><span class="pr">'+pr[k]+' ⭐ <small>/ 30 '+L("дней")+'</small></span></div>'+
       '<ul>'+feat.map(f=>'<li>'+f+'</li>').join("")+'</ul>'+
@@ -1456,7 +1456,8 @@ const A={
         else { if(btn){ btn.disabled=false; btn.textContent=L("Оформить за")+" "+(ACC.prices||{})[k]+" ⭐"; }
           if(st==="failed" && err) err.textContent=L("Оплата не прошла. Попробуйте ещё раз."); }
       });
-    }catch(_){ if(btn){ btn.disabled=false; btn.textContent=L("Оформить за")+" "+(ACC.prices||{})[k]+" ⭐"; } if(err) err.textContent=L("Не удалось связаться с сервером оплаты. Проверьте интернет и попробуйте ещё раз."); }
+    }catch(_){ await loadAcc(); if(ACC[k]*1000>Date.now()||(k==="lite"&&ACC.coach*1000>Date.now())){ closeSheet(); render(); openSheet(sheetTiers(),"tiers"); return; }
+      if(btn){ btn.disabled=false; btn.textContent=L("Оформить за")+" "+(ACC.prices||{})[k]+" ⭐"; } if(err) err.textContent=L("Не удалось связаться с сервером оплаты. Проверьте интернет и попробуйте ещё раз."); }
   },
   setlang(x){ if(x===LANG){ closeSheet(); return; } try{ localStorage.setItem("tb_lang",x); }catch(_){} S.lang=x; saveCfg(); haptic("ok"); setTimeout(()=>location.reload(),150); },
 
