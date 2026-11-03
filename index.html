@@ -983,6 +983,14 @@ const LVL={none:0,lite:1,coach:2,open:2};
 const has=lvl=> LVL[ACC.plan]>=LVL[lvl];
 async function api(path,body){ const r=await fetch(API.replace(/\/$/,"")+path,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(Object.assign({initData:tg.initData},body||{}))});
   if(!r.ok) throw new Error("api "+r.status); return r.json(); }
+/* ask once for permission to receive bot messages (trial reminders) */
+async function askWrite(){
+  if(!inTG || !API || !tg.requestWriteAccess || !(tg.isVersionAtLeast&&tg.isVersionAtLeast("6.9"))) return;
+  if(!ACC.trial || ACC.owner) return;
+  const got=await store.get(["wa"]); if(got.wa) return;
+  store.set("wa","1");
+  try{ tg.requestWriteAccess(ok=>{ if(ok) api("/api/status",{wa:1}).catch(()=>{}); }); }catch(_){}
+}
 async function loadAcc(){
   if(!API || !inTG){ Object.assign(ACC,{plan:inTG?"open":"coach",demo:!inTG,ready:true}); return; }
   try{ const j=await api("/api/status"); Object.assign(ACC,j,{ready:true,err:false}); store.set("acc",JSON.stringify(j)); }
@@ -1703,7 +1711,7 @@ if(inTG){
 document.querySelectorAll("[data-i18n]").forEach(el=>el.textContent=L(el.dataset.i18n));
 document.querySelectorAll("[data-i18n-aria]").forEach(el=>el.setAttribute("aria-label",L(el.dataset.i18nAria)));
 document.title="Million "+L("Трекер");
-Promise.all([load().then(async()=>{ await loadMeals(); if(!inTG && S.demo && !S.mp.me) seedMeals(); }),loadAcc()]).then(()=>{ if(S.act && S.act.order.length) S.openEx=S.act.order[S.act.order.length-1]; render(); setInterval(tick,1000); incoming(); });
+Promise.all([load().then(async()=>{ await loadMeals(); if(!inTG && S.demo && !S.mp.me) seedMeals(); }),loadAcc()]).then(()=>{ if(S.act && S.act.order.length) S.openEx=S.act.order[S.act.order.length-1]; render(); setInterval(tick,1000); incoming(); setTimeout(askWrite,4000); });
 })();
 </script>
 
