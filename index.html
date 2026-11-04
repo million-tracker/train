@@ -965,6 +965,7 @@ function reportText(w){
 async function incoming(){
   if(!inTG) return;
   const sp=tg.initDataUnsafe && tg.initDataUnsafe.start_param; if(!sp) return;
+  if(!/^[zjrmg]/.test(sp)) return; // e.g. Telegram affiliate links (_tgr_…): nothing to open
   const h=hashStr(sp); if(S.seen.includes(h)) return;
   if(sp[0]==="m") return incomingMeal(sp,h);
   if(sp[0]==="g") return incomingGift(sp,h);
