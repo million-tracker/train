@@ -322,6 +322,22 @@ button.chip{cursor:pointer}
 .mleg{display:flex;justify-content:center;gap:16px;margin-top:10px;font-size:12px;color:var(--muted)}
 .mleg span{display:inline-flex;align-items:center;gap:6px}
 .mleg i{display:inline-block;width:8px;height:8px;border-radius:50%}
+.mday .dots{display:flex;gap:3px;height:7px}
+.mday i.cl{background:var(--accent)}
+.mday.sel{background:var(--surface)}
+.hrows{display:flex;flex-direction:column;background:var(--card);border-radius:var(--r);overflow:hidden}
+.hrow{display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center;padding:11px 14px;background:transparent;border:0;border-top:1px solid var(--line);color:var(--fg);text-align:left;cursor:pointer;font:inherit}
+.hrow:first-child{border-top:0}
+.hrow .dd{text-align:center;line-height:1.05}
+.hrow .dd b{display:block;font:600 18px var(--display)}
+.hrow .dd small{font-size:11px;color:var(--muted);text-transform:uppercase}
+.hrow .tt{min-width:0}
+.hrow .tt b{display:block;font-size:15px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hrow .tt small{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--muted);overflow:hidden;white-space:nowrap}
+.hrow .tt small i{flex:none;width:7px;height:7px;border-radius:50%}
+.hrow .tn{font:600 15px var(--display);font-variant-numeric:tabular-nums;white-space:nowrap}
+.hrow .tn small{font:500 11px var(--body);color:var(--muted);margin-left:2px}
+.dayclr{background:transparent;border:0;color:var(--accent);font:600 14px var(--body);cursor:pointer;padding:4px 2px}
 .week-sum{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);text-align:center}
 .week-sum b{color:var(--fg)}
 
@@ -433,6 +449,8 @@ Object.assign(I18N.uk,{"Добавить название тренировки":
 Object.assign(I18N.uk,{"Следующий план по факту": "Наступний план за фактом", "Повторить этот план": "Повторити цей план", "Откроется новый план для клиента с весами и повторами из отчёта. Поправьте, что нужно (например, +5% к весам), и отправьте.": "Відкриється новий план для клієнта з вагами й повторами зі звіту. Виправте, що треба (наприклад, +5% до ваг), і надішліть.", "Составлено по факту отчёта от ": "Складено за фактом звіту від ", "Повтор плана от ": "Повтор плану від ", ". Проверьте веса и отправьте клиенту.": ". Перевірте ваги й надішліть клієнту."});Object.assign(I18N.en,{"Следующий план по факту": "Next plan from actual results", "Повторить этот план": "Repeat this plan", "Откроется новый план для клиента с весами и повторами из отчёта. Поправьте, что нужно (например, +5% к весам), и отправьте.": "A new client plan opens with the weights and reps from this report. Adjust what you need (e.g. +5% to weights) and send it.", "Составлено по факту отчёта от ": "Built from the report of ", "Повтор плана от ": "Repeat of the plan from ", ". Проверьте веса и отправьте клиенту.": ". Check the weights and send it to your client."});
 Object.assign(I18N.uk,{"Сделано в прошлый раз": "Зроблено минулого разу", "Не выполнено": "Не виконано"});Object.assign(I18N.en,{"Сделано в прошлый раз": "Done last time", "Не выполнено": "Not done"});
 Object.assign(I18N.uk,{"Неделя": "Тиждень", "Месяц": "Місяць", "Предыдущий месяц": "Попередній місяць", "Следующий месяц": "Наступний місяць", "Этот месяц": "Цей місяць", ", план": ", план", "тренировка": "тренування", "план": "план", "тренировок": "тренувань", "запланировано": "заплановано", "На этот день ничего не запланировано.": "На цей день нічого не заплановано.", "Календарь": "Календар", "Запланировано": "Заплановано"});Object.assign(I18N.en,{"Неделя": "Week", "Месяц": "Month", "Предыдущий месяц": "Previous month", "Следующий месяц": "Next month", "Этот месяц": "This month", ", план": ", plan", "тренировка": "workout", "план": "plan", "тренировок": "workouts", "запланировано": "planned", "На этот день ничего не запланировано.": "Nothing planned for this day.", "Календарь": "Calendar", "Запланировано": "Planned"});
+Object.assign(I18N.uk,{"Все": "Усі", "К сегодня": "До сьогодні", "мои": "мої", "клиенты": "клієнти", "тренир.": "тренув.", "отчёт.": "звіт.", "В этом месяце пока пусто": "У цьому місяці поки порожньо", "Весь месяц": "Увесь місяць", "За месяц": "За місяць", "В этом месяце тренировок нет.": "У цьому місяці тренувань немає.", "Тренировка": "Тренування", "упр.": "впр."});Object.assign(I18N.en,{"Все": "All", "К сегодня": "Back to today", "мои": "mine", "клиенты": "clients", "тренир.": "workouts", "отчёт.": "reports", "В этом месяце пока пусто": "Nothing this month yet", "Весь месяц": "Whole month", "За месяц": "This month", "В этом месяце тренировок нет.": "No workouts this month.", "Тренировка": "Workout", "упр.": "ex."});
+Object.assign(I18N.uk,{"Чей календарь": "Чий календар", "Мои тренировки": "Мої тренування", "отчёт": "звіт", " раб. подх.": " роб. підх."});Object.assign(I18N.en,{"Чей календарь": "Whose calendar", "Мои тренировки": "My workouts", "отчёт": "report", " раб. подх.": " working sets"});
 Object.assign(I18N.uk,{"Коуч": "Коуч", "Лайт": "Лайт", "Тариф": "Тариф", "демо": "демо", "Подписка не активна": "Підписка не активна", "Пробный период": "Пробний період", "до ": "до ", "Выбрать тариф": "Вибрати тариф", "Тарифы": "Тарифи", "дней": "днів", "Активен до ": "Активний до ", ", продлится автоматически": ", подовжиться автоматично", ", автопродление выключено": ", автоподовження вимкнено", "Входит в тариф «Коуч»": "Входить до тарифу «Коуч»", "Оформить за": "Оформити за", "Тарифы Million": "Тарифи Million", "Сейчас идёт пробный период с полным доступом до ": "Зараз триває пробний період з повним доступом до ", "Это демо: оплата работает только в Telegram.": "Це демо: оплата працює лише в Telegram.", "Свои тренировки и планы": "Власні тренування та плани", "Таймер отдыха со звуком": "Таймер відпочинку зі звуком", "История, календарь и прогресс": "Історія, календар і прогрес", "Тренировки по планам от тренера": "Тренування за планами від тренера", "Всё из тарифа «Лайт»": "Усе з тарифу «Лайт»", "Планы для клиентов с весами по подходам": "Плани для клієнтів з вагами за підходами", "Отправка планов в Telegram": "Надсилання планів у Telegram", "Отчёты клиентов: план и факт": "Звіти клієнтів: план і факт", "Для тренеров": "Для тренерів", "Оплата в Telegram Stars. Подписка продлевается каждые 30 дней. Отменить можно в Telegram: Настройки → Мои звёзды. Помощь с оплатой: команда /paysupport в боте.": "Оплата в Telegram Stars. Підписка подовжується кожні 30 днів. Скасувати можна в Telegram: Налаштування → Мої зірки. Допомога з оплатою: команда /paysupport у боті.", "Чтобы записывать свои тренировки, нужен тариф «Лайт» или «Коуч».": "Щоб записувати власні тренування, потрібен тариф «Лайт» або «Коуч».", "Планы для клиентов доступны в тарифе «Коуч».": "Плани для клієнтів доступні в тарифі «Коуч».", "Планировать тренировки можно в тарифе «Лайт» или «Коуч».": "Планувати тренування можна в тарифі «Лайт» або «Коуч».", "Отправлять планы клиентам можно в тарифе «Коуч».": "Надсилати плани клієнтам можна в тарифі «Коуч».", "Сохранять отчёты клиентов можно в тарифе «Коуч».": "Зберігати звіти клієнтів можна в тарифі «Коуч».", "Оплата работает только внутри Telegram.": "Оплата працює лише всередині Telegram.", "Открываем оплату…": "Відкриваємо оплату…", "Оплата прошла, включаем тариф…": "Оплата пройшла, вмикаємо тариф…", "Оплата не прошла. Попробуйте ещё раз.": "Оплата не пройшла. Спробуйте ще раз.", "Не удалось связаться с сервером оплаты. Проверьте интернет и попробуйте ещё раз.": "Не вдалося зв’язатися з сервером оплати. Перевірте інтернет і спробуйте ще раз."});Object.assign(I18N.en,{"Коуч": "Coach", "Лайт": "Lite", "Тариф": "Plan", "демо": "demo", "Подписка не активна": "No active subscription", "Пробный период": "Free trial", "до ": "until ", "Выбрать тариф": "Choose a plan", "Тарифы": "Plans", "дней": "days", "Активен до ": "Active until ", ", продлится автоматически": ", renews automatically", ", автопродление выключено": ", auto-renewal is off", "Входит в тариф «Коуч»": "Included in Coach", "Оформить за": "Subscribe for", "Тарифы Million": "Million plans", "Сейчас идёт пробный период с полным доступом до ": "Your free trial with full access runs until ", "Это демо: оплата работает только в Telegram.": "This is a demo: payment works only in Telegram.", "Свои тренировки и планы": "Your own workouts and plans", "Таймер отдыха со звуком": "Rest timer with sound", "История, календарь и прогресс": "History, calendar and progress", "Тренировки по планам от тренера": "Workouts from your coach’s plans", "Всё из тарифа «Лайт»": "Everything in Lite", "Планы для клиентов с весами по подходам": "Client plans with per-set weights", "Отправка планов в Telegram": "Send plans via Telegram", "Отчёты клиентов: план и факт": "Client reports: plan vs actual", "Для тренеров": "For coaches", "Оплата в Telegram Stars. Подписка продлевается каждые 30 дней. Отменить можно в Telegram: Настройки → Мои звёзды. Помощь с оплатой: команда /paysupport в боте.": "Paid in Telegram Stars. The subscription renews every 30 days. Cancel any time in Telegram: Settings → My Stars. Payment help: send /paysupport to the bot.", "Чтобы записывать свои тренировки, нужен тариф «Лайт» или «Коуч».": "To log your own workouts you need the Lite or Coach plan.", "Планы для клиентов доступны в тарифе «Коуч».": "Client plans are part of the Coach plan.", "Планировать тренировки можно в тарифе «Лайт» или «Коуч».": "Planning workouts needs the Lite or Coach plan.", "Отправлять планы клиентам можно в тарифе «Коуч».": "Sending plans to clients is part of the Coach plan.", "Сохранять отчёты клиентов можно в тарифе «Коуч».": "Saving client reports is part of the Coach plan.", "Оплата работает только внутри Telegram.": "Payment works only inside Telegram.", "Открываем оплату…": "Opening payment…", "Оплата прошла, включаем тариф…": "Payment received, activating your plan…", "Оплата не прошла. Попробуйте ещё раз.": "Payment failed. Please try again.", "Не удалось связаться с сервером оплаты. Проверьте интернет и попробуйте ещё раз.": "Couldn’t reach the payment server. Check your connection and try again."});
 Object.assign(I18N.uk,{"Ваша заметка": "Ваша нотатка", "Комментарий тренера": "Коментар тренера", "Комментарий к подходу": "Коментар до підходу", "Например: пауза внизу, до отказа": "Наприклад: пауза внизу, до відмови", "Комментарий к упражнению: техника, темп, хват…": "Коментар до вправи: техніка, темп, хват…", "Комментарий к упражнению": "Коментар до вправи", "Комментарий к этому подходу (необязательно)": "Коментар до цього підходу (необов’язково)", "Заметка к упражнению: самочувствие, техника…": "Нотатка до вправи: самопочуття, техніка…", "Заметка к упражнению": "Нотатка до вправи", "Нажмите на подход, чтобы добавить или изменить комментарий.": "Натисніть на підхід, щоб додати або змінити коментар.", "Например: тяжело, болит плечо, лёгкий": "Наприклад: важко, болить плече, легко", "Заметка клиента": "Нотатка клієнта", "<h3>План не помещается в ссылку</h3><p class=\"muted\">Telegram ограничивает длину ссылки. Сократите комментарии или названия упражнений, либо разделите план на два дня.</p><button class=\"btn wide\" data-a=\"close\">Понятно</button>": "<h3>План не вміщується в посилання</h3><p class=\"muted\">Telegram обмежує довжину посилання. Скоротіть коментарі чи назви вправ або розділіть план на два дні.</p><button class=\"btn wide\" data-a=\"close\">Зрозуміло</button>"});Object.assign(I18N.en,{"Ваша заметка": "Your note", "Комментарий тренера": "Coach’s comment", "Комментарий к подходу": "Set comment", "Например: пауза внизу, до отказа": "e.g. pause at the bottom, to failure", "Комментарий к упражнению: техника, темп, хват…": "Exercise comment: technique, tempo, grip…", "Комментарий к упражнению": "Exercise comment", "Комментарий к этому подходу (необязательно)": "Comment for this set (optional)", "Заметка к упражнению: самочувствие, техника…": "Exercise note: how it felt, technique…", "Заметка к упражнению": "Exercise note", "Нажмите на подход, чтобы добавить или изменить комментарий.": "Tap a set to add or edit its comment.", "Например: тяжело, болит плечо, лёгкий": "e.g. hard, shoulder hurts, easy", "Заметка клиента": "Client’s note", "<h3>План не помещается в ссылку</h3><p class=\"muted\">Telegram ограничивает длину ссылки. Сократите комментарии или названия упражнений, либо разделите план на два дня.</p><button class=\"btn wide\" data-a=\"close\">Понятно</button>": "<h3>The plan doesn’t fit into a link</h3><p class=\"muted\">Telegram limits link length. Shorten the comments or exercise names, or split the plan over two days.</p><button class=\"btn wide\" data-a=\"close\">Got it</button>"});
 Object.assign(I18N.uk,{'<div class="meta">рабочих подходов ':'<div class="meta">робочих підходів '});Object.assign(I18N.en,{'<div class="meta">рабочих подходов ':'<div class="meta">working sets '});
@@ -769,30 +787,47 @@ const PEN='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="c
 /* one history: my workouts + every client's reports, filtered by person */
 function histPeople(){ const m=new Map(); for(const r of S.reps){ const k=repWho(r); m.set(k,(m.get(k)||0)+1); } return m; }
 function viewHist(){
-  const people=histPeople();
-  if(S.hf!=="all"&&S.hf!=="me"&&S.hf!=="reps"&&!people.has(S.hf.slice(2))) S.hf="all";
-  if(!S.hist.length&&!S.reps.length) return calView()+L('<div class="empty" style="margin-top:16px">Здесь появятся завершённые тренировки.<br>Начните первую на вкладке «Тренировка».</div>');
-  const chip=(k,t,n)=>'<button data-a="hf" data-x="'+esc(k)+'" aria-pressed="'+(S.hf===k)+'">'+t+(n!=null?'<small>'+n+'</small>':"")+'</button>';
+  /* one calendar per person: me, or one client */
+  const people=[...histPeople().keys()];
+  for(const p of S.plans) if(p.who&&!people.some(c=>sameWho(c,p.who))) people.push(p.who);
+  if(!S.hf.startsWith("c:")||!people.includes(S.hf.slice(2))) S.hf="me";
+  const chip=(k,t)=>'<button data-a="hf" data-x="'+esc(k)+'" aria-pressed="'+(S.hf===k)+'">'+t+'</button>';
   let h=demoBar();
-  if(S.reps.length) h+='<div class="hfilter" role="group" aria-label="'+L("Чья история")+'">'+chip("all",L("Все"),S.hist.length+S.reps.length)+chip("me",L("Мои"),S.hist.length)+
-    (people.size>1?chip("reps",L("Все клиенты"),S.reps.length):"")+[...people].map(([c,n])=>chip("c:"+c,esc(c),n)).join("")+'</div>';
-  const mine=S.hf==="all"||S.hf==="me", theirs=S.hf!=="me";
-  if(S.hf==="me"||!S.reps.length) h+=calView();
-  const rs=S.reps.filter(r=>S.hf==="all"||S.hf==="reps"||(S.hf.startsWith("c:")&&repWho(r)===S.hf.slice(2)));
-  if(S.hf.startsWith("c:")&&rs.length){ const st=rs.map(repStats), pc=st.filter(x=>x.pct!=null);
-    h+='<div class="tiles" style="margin-top:6px"><div class="tile"><span class="num">'+rs.length+'</span><small>'+L("отчётов")+'</small></div>'+
-      '<div class="tile"><span class="num">'+(pc.length?Math.round(pc.reduce((a,x)=>a+x.pct,0)/pc.length)+"%":"—")+'</span><small>'+L("план в среднем")+'</small></div>'+
-      '<div class="tile"><span class="num">'+dshort(fromKey(rs[0].d).getTime())+'</span><small>'+L("последний")+'</small></div></div>'; }
-  const items=[...(mine?S.hist.map(w=>({t:w.s,k:"w",o:w})):[]),...(theirs?rs.map(r=>({t:fromKey(r.d).getTime()+43200000,k:"r",o:r})):[])].sort((a,b)=>b.t-a.t);
-  h+='<h2 style="margin-top:24px">'+(S.hf==="me"?L("Мои тренировки"):S.hf==="all"?L("Вся история"):S.hf==="reps"?L("Отчёты клиентов"):L("Отчёты: ")+esc(S.hf.slice(2)))+'</h2>';
-  let month=-1;
-  for(const it of items.slice(0,S.hlim)){
-    const d=new Date(it.t), mk=d.getFullYear()*12+d.getMonth();
-    if(mk!==month){ month=mk; h+='<h2 style="margin-top:14px">'+d.toLocaleDateString(LOC,{month:"long",year:"numeric"})+'</h2>'; }
-    h+='<div style="margin-bottom:8px">'+(it.k==="w"?histItem(it.o):repItem(it.o))+'</div>';
-  }
-  if(!items.length) h+='<div class="empty">'+L("Пока пусто.")+'</div>';
-  if(items.length>S.hlim) h+='<button class="btn wide morebtn" data-a="hmore">'+L("Показать ещё")+' ('+(items.length-S.hlim)+')</button>';
+  if(people.length) h+='<div class="hfilter" role="group" aria-label="'+L("Чей календарь")+'">'+chip("me",L("Мои тренировки"))+people.map(c=>chip("c:"+c,esc(c))).join("")+'</div>';
+  const mine=S.hf==="me", theirs=!mine;
+  const okR=r=>S.hf==="all"||S.hf==="reps"||(S.hf.startsWith("c:")&&repWho(r)===S.hf.slice(2));
+  const okP=p=>p.who?(theirs&&sameWho(p.who,S.hf.slice(2))):mine;
+  const now=new Date(), base=new Date(now.getFullYear(),now.getMonth()+S.mOff,1), mo=base.getMonth(), mk=dkey(base).slice(0,7), tk=todayKey();
+  const first=addDays(base,-((base.getDay()+6)%7));
+  const ev=[];
+  if(mine) for(const w of S.hist){ const k=dkey(w.s); if(k.slice(0,7)===mk) ev.push({k,t:"w",o:w,ts:w.s}); }
+  if(theirs) for(const r of S.reps) if(okR(r)&&r.d.slice(0,7)===mk) ev.push({k:r.d,t:"r",o:r,ts:fromKey(r.d).getTime()+43200000});
+  const pls=S.plans.filter(p=>p.date&&p.date.slice(0,7)===mk&&okP(p)&&!p.done);
+  const by=new Map(); const add=(k,x)=>{ if(!by.has(k)) by.set(k,{w:0,r:0,p:0}); by.get(k)[x]++; };
+  ev.forEach(e=>add(e.k,e.t)); pls.forEach(p=>add(p.date,"p"));
+  if(S.mSel&&S.mSel.slice(0,7)!==mk) S.mSel=null;
+  let title=base.toLocaleDateString(LOC,{month:"long",year:"numeric"}); title=title.charAt(0).toUpperCase()+title.slice(1);
+  h+='<div class="week"><div class="week-head"><button data-a="mnav" data-x="-1" aria-label="'+L("Предыдущий месяц")+'">‹</button><div><b>'+title+'</b><small>'+(S.mOff===0?L("Этот месяц"):'<span data-a="mnow" style="color:var(--accent);cursor:pointer">'+L("К сегодня")+'</span>')+'</small></div><button data-a="mnav" data-x="1" aria-label="'+L("Следующий месяц")+'">›</button></div><div class="mgrid">'+WDS.map(d=>'<span class="wh">'+d+'</span>').join("");
+  for(let i=0;i<42;i++){ const d=addDays(first,i); if(i>=35&&d.getMonth()!==mo) break; const k=dkey(d), inM=d.getMonth()===mo, c=by.get(k);
+    h+='<button class="mday'+(inM?"":" out")+(k===tk?" today":"")+(S.mSel===k?" sel":"")+(k<tk&&!c?" past":"")+'" data-a="mday" data-x="'+k+'">'+d.getDate()+'<span class="dots">'+
+      (c&&c.w?'<i class="dn"></i>':"")+(c&&c.r?'<i class="cl"></i>':"")+(c&&c.p?'<i class="pl"></i>':"")+'</span></button>'; }
+  const nW=ev.filter(e=>e.t==="w").length, nR=ev.filter(e=>e.t==="r").length, tt=ev.reduce((a,e)=>a+(e.t==="w"?totals(e.o.sets).t:repStats(e.o).t),0);
+  const leg=[mine?['var(--good)',L("тренировка")]:['var(--accent)',L("отчёт")],['transparent;box-shadow:inset 0 0 0 2px var(--accent)',L("план")]];
+  h+='</div><div class="mleg">'+leg.map(([c,t])=>'<span><i style="background:'+c+'"></i>'+t+'</span>').join("")+'</div>'+
+    '<div class="week-sum">'+(ev.length?(mine&&nW?'<b>'+nW+'</b> '+L("тренир.")+' · ':"")+(nR?'<b>'+nR+'</b> '+L("отчёт.")+' · ':"")+'<b>'+ft(tt)+'</b> '+U():L("В этом месяце пока пусто"))+'</div></div>';
+  const list=S.mSel?ev.filter(e=>e.k===S.mSel):ev;
+  if(S.mSel){ const sd=fromKey(S.mSel);
+    h+='<div class="h2row"><h2>'+WDF[(sd.getDay()+6)%7]+", "+sd.getDate()+" "+MONG[sd.getMonth()]+'</h2><button class="dayclr" data-a="mday" data-x="">'+L("Весь месяц")+'</button></div>'; }
+  else h+='<h2 style="margin-top:22px">'+L("За месяц")+'</h2>';
+  list.sort((a,b)=>b.ts-a.ts);
+  if(list.length) h+='<div class="hrows">'+list.map(e=>{ const d=fromKey(e.k);
+    if(e.t==="w"){ const w=e.o, m=byEx(w.sets), names=[...m.keys()].map(x=>S.ex[x]||"?");
+      return '<button class="hrow" data-a="wk" data-x="'+esc(w.id)+'"><span class="dd"><b>'+d.getDate()+'</b><small>'+WDS[(d.getDay()+6)%7]+'</small></span><span class="tt"><b>'+esc(w.pname||names.slice(0,2).join(", "))+'</b><small><i style="background:var(--good)"></i>'+(w.pname?esc(names.length+" "+L("упр.")):esc(names.length>2?"+"+(names.length-2)+" "+L("упр."):""))+(w.pname||names.length>2?" · ":"")+mins((w.e||w.s)-w.s)+L(" мин")+'</small></span><span class="tn">'+ft(totals(w.sets).t)+'<small>'+U()+'</small></span></button>'; }
+    const r=e.o, st=repStats(r);
+    return '<button class="hrow" data-a="ropen" data-x="'+esc(r.id)+'"><span class="dd"><b>'+d.getDate()+'</b><small>'+WDS[(d.getDay()+6)%7]+'</small></span><span class="tt"><b>'+esc(r.n||L("Тренировка"))+'</b><small><i style="background:var(--accent)"></i>'+st.n+L(" раб. подх.")+(st.pct!=null?' · <span class="meta '+(st.pct>=100?"done":"miss")+'">'+st.pct+'%</span>':"")+'</small></span><span class="tn">'+ft(st.t)+'<small>'+U()+'</small></span></button>'; }).join("")+'</div>';
+  else if(!S.mSel||!pls.some(p=>p.date===S.mSel)) h+='<div class="empty sm">'+(S.mSel?(S.mSel>=tk?L("На этот день ничего не запланировано."):L("В этот день тренировки не было.")):L("В этом месяце тренировок нет."))+'</div>';
+  if(S.mSel){ for(const p of pls.filter(p=>p.date===S.mSel)) h+='<div style="margin-top:10px">'+planCard(p)+'</div>';
+    if(mine&&S.mSel>=tk&&!planOn(S.mSel)) h+='<button class="addex" style="margin-top:10px" data-a="pnew" data-x="'+S.mSel+L('">+ Запланировать на этот день</button>'); }
   return h;
 }
 
@@ -1788,8 +1823,9 @@ Object.assign(A,FOOD_A);
 Object.assign(A,{
   calm(k){ S.calM=k==="m"; try{ localStorage.setItem('tb_calm',S.calM?'1':'0'); }catch(_){} haptic("light"); render(); },
   mnav(d){ S.mOff+=+d; S.mSel=null; haptic("light"); render(); },
-  mday(k){ S.mSel=k; haptic("light"); render(); },
-  calopen(){ S.calM=true; try{ localStorage.setItem('tb_calm','1'); }catch(_){} S.mOff=0; S.mSel=null; if(S.reps.length) S.hf="me"; S.tab="hist"; render(); window.scrollTo(0,0); }
+  mday(k){ S.mSel=k&&S.mSel!==k?k:null; haptic("light"); render(); },
+  mnow(){ S.mOff=0; S.mSel=null; render(); },
+  calopen(){ S.hf="me"; S.mOff=0; S.mSel=null; S.tab="hist"; render(); window.scrollTo(0,0); }
 });
 /* next plan for a client from a saved report: "f:<id>" = what was actually done, "p:<id>" = the same plan again */
 function planFromReport(r,useFact){
@@ -1846,7 +1882,7 @@ Object.assign(A,{
 Object.assign(A,{
   hf(k){ S.hf=k; S.hlim=30; try{ localStorage.setItem('tb_hf',k); }catch(_){} haptic("light"); render(); },
   hmore(){ S.hlim+=30; render(); },
-  histto(k){ S.hf=k==="reps"&&histPeople().size===1?"c:"+[...histPeople().keys()][0]:k; S.tab="hist"; render(); window.scrollTo(0,0); },
+  histto(k){ const ps=[...histPeople().keys()]; S.hf=k==="reps"?(ps[0]?"c:"+ps[0]:"me"):k; S.mOff=0; S.mSel=null; S.tab="hist"; render(); window.scrollTo(0,0); },
   rephide(){ S.repHide=!S.repHide; try{ localStorage.setItem('tb_rephide',S.repHide?'1':'0'); }catch(_){} haptic("light"); render(); },
   lasthide(){ S.lastHide=!S.lastHide; try{ localStorage.setItem('tb_lasthide',S.lastHide?'1':'0'); }catch(_){} haptic("light"); render(); }
 });
