@@ -340,6 +340,9 @@ button.chip{cursor:pointer}
 .scrim{position:absolute;inset:0;background:rgba(8,10,14,.45)}
 .panel{position:relative;width:100%;max-width:560px;max-height:86%;overflow-y:auto;background:var(--bg);border-radius:22px 22px 0 0;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(20px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));animation:up .22s ease-out;clip-path:inset(0 round 22px 22px 0 0)}
 .grab{width:40px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 14px}
+.sx{position:sticky;top:0;float:right;z-index:3;width:38px;height:38px;margin:-2px -4px -38px 8px;border-radius:50%;border:0;background:var(--card);color:var(--fg);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.sx:active{transform:scale(.94)}
+#sheetBody>:first-child{margin-right:44px}
 @keyframes up{from{transform:translateY(40px);opacity:.4}}
 .exlist{display:flex;flex-direction:column;background:var(--card);border-radius:var(--r);overflow:hidden}
 .exlist button{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);font-weight:600;display:flex;justify-content:space-between;gap:10px}
@@ -379,7 +382,7 @@ button.chip{cursor:pointer}
 
 <div class="sheet" id="sheet" hidden>
   <div class="scrim" data-a="close"></div>
-  <div class="panel" role="dialog" aria-modal="true"><div class="grab"></div><div id="sheetBody"></div></div>
+  <div class="panel" role="dialog" aria-modal="true"><button class="sx" data-a="close" aria-label="Закрыть"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button><div class="grab"></div><div id="sheetBody"></div></div>
 </div>
 
 <script>
@@ -1488,7 +1491,7 @@ function render(){
   renderRest();
   if(tg){ try{ S.act ? tg.enableClosingConfirmation() : tg.disableClosingConfirmation(); }catch(_){} }
 }
-function openSheet(html,kind){ sheetKind=kind||null; $("#sheetBody").innerHTML=html; $("#sheet").hidden=false; if(tg&&tg.BackButton) tg.BackButton.show(); }
+function openSheet(html,kind){ const was=sheetKind, fresh=$("#sheet").hidden||was!==kind; sheetKind=kind||null; $("#sheetBody").innerHTML=html; $("#sheet").hidden=false; if(fresh) $(".panel").scrollTop=0; if(tg&&tg.BackButton) tg.BackButton.show(); }
 function closeSheet(){ $("#sheet").hidden=true; sheetKind=null; S.confirm=null; if(tg&&tg.BackButton) tg.BackButton.hide(); }
 
 function lastSetTime(){ const a=S.act; if(!a || !a.sets.length) return 0; const l=a.sets[a.sets.length-1]; return l[4]!=null ? a.s+l[4]*1000 : 0; }
@@ -1843,7 +1846,7 @@ if(inTG){
   if(tg.BackButton) tg.BackButton.onClick(closeSheet);
 }
 
-document.querySelectorAll("[data-i18n]").forEach(el=>el.textContent=L(el.dataset.i18n));
+document.querySelectorAll("[data-i18n]").forEach(el=>el.textContent=L(el.dataset.i18n)); document.querySelector(".sx").setAttribute("aria-label",L("Закрыть"));
 document.querySelectorAll("[data-i18n-aria]").forEach(el=>el.setAttribute("aria-label",L(el.dataset.i18nAria)));
 document.title="Million "+L("Трекер");
 Promise.all([load().then(async()=>{ await loadMeals(); if(!inTG && S.demo && !S.mp.me) seedMeals(); }),loadAcc()]).then(()=>{ if(S.act && S.act.order.length) S.openEx=S.act.order[S.act.order.length-1]; render(); setInterval(tick,1000); incoming(); setTimeout(askWrite,4000); });
