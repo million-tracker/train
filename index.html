@@ -193,6 +193,13 @@ h3{font:700 17px/1.25 var(--body)}
 .target b{color:var(--fg)}
 .ex>header .meta.done{color:var(--good);font-weight:700}
 .pitem{background:var(--card);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px}
+.sst{display:inline-block;font:800 11px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;color:#fff;background:#8B5CF6;border-radius:6px;padding:4px 7px;margin:0 0 4px}
+.plan-list .sst{align-self:flex-start;margin:0}
+.pitem.ss{box-shadow:inset 4px 0 0 #8B5CF6}
+.ssb{align-self:flex-start;border-radius:999px;padding:6px 12px;background:var(--surface);font-weight:700;font-size:12.5px;color:var(--muted);border:1.5px dashed transparent;cursor:pointer}
+.ssb[aria-pressed="true"]{color:#fff;background:#8B5CF6}
+.ex.ss{box-shadow:inset 4px 0 0 #8B5CF6}
+.ssnext{font-size:13px;color:#A78BFA;font-weight:700;padding:2px 0}
 .pitem-h{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .pitem-h button{width:32px;height:32px;flex:none;border-radius:10px;background:var(--surface);font-size:18px}
 .srow{display:grid;grid-template-columns:24px 1.25fr 1fr 30px 30px;gap:5px;align-items:center}
@@ -464,6 +471,8 @@ Object.assign(I18N.uk,{"Неделя": "Тиждень", "Месяц": "Міся
 Object.assign(I18N.uk,{"Все": "Усі", "К сегодня": "До сьогодні", "мои": "мої", "клиенты": "клієнти", "тренир.": "тренув.", "отчёт.": "звіт.", "В этом месяце пока пусто": "У цьому місяці поки порожньо", "Весь месяц": "Увесь місяць", "За месяц": "За місяць", "В этом месяце тренировок нет.": "У цьому місяці тренувань немає.", "Тренировка": "Тренування", "упр.": "впр."});Object.assign(I18N.en,{"Все": "All", "К сегодня": "Back to today", "мои": "mine", "клиенты": "clients", "тренир.": "workouts", "отчёт.": "reports", "В этом месяце пока пусто": "Nothing this month yet", "Весь месяц": "Whole month", "За месяц": "This month", "В этом месяце тренировок нет.": "No workouts this month.", "Тренировка": "Workout", "упр.": "ex."});
 Object.assign(I18N.uk,{"Чей календарь": "Чий календар", "Мои тренировки": "Мої тренування", "отчёт": "звіт", " раб. подх.": " роб. підх."});Object.assign(I18N.en,{"Чей календарь": "Whose calendar", "Мои тренировки": "My workouts", "отчёт": "report", " раб. подх.": " working sets"});
 Object.assign(I18N.uk,{"Единицы": "Одиниці", "разминочный (Р)": "розминковий (Р)", "рабочий": "робочий"});Object.assign(I18N.en,{"Единицы": "Units", "разминочный (Р)": "warm-up (W)", "рабочий": "working"});
+Object.assign(I18N.uk,{"Суперсет": "Суперсет", "В суперсете с «": "У суперсеті з «", "Суперсет с предыдущим": "Суперсет з попередньою"});Object.assign(I18N.en,{"Суперсет": "Superset", "В суперсете с «": "Superset with “", "Суперсет с предыдущим": "Superset with previous"});
+Object.assign(I18N.uk,{"Ссылка устарела или сервер недоступен. Попросите отправить её ещё раз.": "Посилання застаріло або сервер недоступний. Попросіть надіслати його ще раз.", "Не удалось открыть план": "Не вдалося відкрити план", "Не удалось открыть отчёт": "Не вдалося відкрити звіт"});Object.assign(I18N.en,{"Ссылка устарела или сервер недоступен. Попросите отправить её ещё раз.": "The link has expired or the server is unavailable. Ask for it to be sent again.", "Не удалось открыть план": "Couldn’t open the plan", "Не удалось открыть отчёт": "Couldn’t open the report"});
 Object.assign(I18N.uk,{"Коуч": "Коуч", "Лайт": "Лайт", "Тариф": "Тариф", "демо": "демо", "Подписка не активна": "Підписка не активна", "Пробный период": "Пробний період", "до ": "до ", "Выбрать тариф": "Вибрати тариф", "Тарифы": "Тарифи", "дней": "днів", "Активен до ": "Активний до ", ", продлится автоматически": ", подовжиться автоматично", ", автопродление выключено": ", автоподовження вимкнено", "Входит в тариф «Коуч»": "Входить до тарифу «Коуч»", "Оформить за": "Оформити за", "Тарифы Million": "Тарифи Million", "Сейчас идёт пробный период с полным доступом до ": "Зараз триває пробний період з повним доступом до ", "Это демо: оплата работает только в Telegram.": "Це демо: оплата працює лише в Telegram.", "Свои тренировки и планы": "Власні тренування та плани", "Таймер отдыха со звуком": "Таймер відпочинку зі звуком", "История, календарь и прогресс": "Історія, календар і прогрес", "Тренировки по планам от тренера": "Тренування за планами від тренера", "Всё из тарифа «Лайт»": "Усе з тарифу «Лайт»", "Планы для клиентов с весами по подходам": "Плани для клієнтів з вагами за підходами", "Отправка планов в Telegram": "Надсилання планів у Telegram", "Отчёты клиентов: план и факт": "Звіти клієнтів: план і факт", "Для тренеров": "Для тренерів", "Оплата в Telegram Stars. Подписка продлевается каждые 30 дней. Отменить можно в Telegram: Настройки → Мои звёзды. Помощь с оплатой: команда /paysupport в боте.": "Оплата в Telegram Stars. Підписка подовжується кожні 30 днів. Скасувати можна в Telegram: Налаштування → Мої зірки. Допомога з оплатою: команда /paysupport у боті.", "Чтобы записывать свои тренировки, нужен тариф «Лайт» или «Коуч».": "Щоб записувати власні тренування, потрібен тариф «Лайт» або «Коуч».", "Планы для клиентов доступны в тарифе «Коуч».": "Плани для клієнтів доступні в тарифі «Коуч».", "Планировать тренировки можно в тарифе «Лайт» или «Коуч».": "Планувати тренування можна в тарифі «Лайт» або «Коуч».", "Отправлять планы клиентам можно в тарифе «Коуч».": "Надсилати плани клієнтам можна в тарифі «Коуч».", "Сохранять отчёты клиентов можно в тарифе «Коуч».": "Зберігати звіти клієнтів можна в тарифі «Коуч».", "Оплата работает только внутри Telegram.": "Оплата працює лише всередині Telegram.", "Открываем оплату…": "Відкриваємо оплату…", "Оплата прошла, включаем тариф…": "Оплата пройшла, вмикаємо тариф…", "Оплата не прошла. Попробуйте ещё раз.": "Оплата не пройшла. Спробуйте ще раз.", "Не удалось связаться с сервером оплаты. Проверьте интернет и попробуйте ещё раз.": "Не вдалося зв’язатися з сервером оплати. Перевірте інтернет і спробуйте ще раз."});Object.assign(I18N.en,{"Коуч": "Coach", "Лайт": "Lite", "Тариф": "Plan", "демо": "demo", "Подписка не активна": "No active subscription", "Пробный период": "Free trial", "до ": "until ", "Выбрать тариф": "Choose a plan", "Тарифы": "Plans", "дней": "days", "Активен до ": "Active until ", ", продлится автоматически": ", renews automatically", ", автопродление выключено": ", auto-renewal is off", "Входит в тариф «Коуч»": "Included in Coach", "Оформить за": "Subscribe for", "Тарифы Million": "Million plans", "Сейчас идёт пробный период с полным доступом до ": "Your free trial with full access runs until ", "Это демо: оплата работает только в Telegram.": "This is a demo: payment works only in Telegram.", "Свои тренировки и планы": "Your own workouts and plans", "Таймер отдыха со звуком": "Rest timer with sound", "История, календарь и прогресс": "History, calendar and progress", "Тренировки по планам от тренера": "Workouts from your coach’s plans", "Всё из тарифа «Лайт»": "Everything in Lite", "Планы для клиентов с весами по подходам": "Client plans with per-set weights", "Отправка планов в Telegram": "Send plans via Telegram", "Отчёты клиентов: план и факт": "Client reports: plan vs actual", "Для тренеров": "For coaches", "Оплата в Telegram Stars. Подписка продлевается каждые 30 дней. Отменить можно в Telegram: Настройки → Мои звёзды. Помощь с оплатой: команда /paysupport в боте.": "Paid in Telegram Stars. The subscription renews every 30 days. Cancel any time in Telegram: Settings → My Stars. Payment help: send /paysupport to the bot.", "Чтобы записывать свои тренировки, нужен тариф «Лайт» или «Коуч».": "To log your own workouts you need the Lite or Coach plan.", "Планы для клиентов доступны в тарифе «Коуч».": "Client plans are part of the Coach plan.", "Планировать тренировки можно в тарифе «Лайт» или «Коуч».": "Planning workouts needs the Lite or Coach plan.", "Отправлять планы клиентам можно в тарифе «Коуч».": "Sending plans to clients is part of the Coach plan.", "Сохранять отчёты клиентов можно в тарифе «Коуч».": "Saving client reports is part of the Coach plan.", "Оплата работает только внутри Telegram.": "Payment works only inside Telegram.", "Открываем оплату…": "Opening payment…", "Оплата прошла, включаем тариф…": "Payment received, activating your plan…", "Оплата не прошла. Попробуйте ещё раз.": "Payment failed. Please try again.", "Не удалось связаться с сервером оплаты. Проверьте интернет и попробуйте ещё раз.": "Couldn’t reach the payment server. Check your connection and try again."});
 Object.assign(I18N.uk,{"Ваша заметка": "Ваша нотатка", "Комментарий тренера": "Коментар тренера", "Комментарий к подходу": "Коментар до підходу", "Например: пауза внизу, до отказа": "Наприклад: пауза внизу, до відмови", "Комментарий к упражнению: техника, темп, хват…": "Коментар до вправи: техніка, темп, хват…", "Комментарий к упражнению": "Коментар до вправи", "Комментарий к этому подходу (необязательно)": "Коментар до цього підходу (необов’язково)", "Заметка к упражнению: самочувствие, техника…": "Нотатка до вправи: самопочуття, техніка…", "Заметка к упражнению": "Нотатка до вправи", "Нажмите на подход, чтобы добавить или изменить комментарий.": "Натисніть на підхід, щоб додати або змінити коментар.", "Например: тяжело, болит плечо, лёгкий": "Наприклад: важко, болить плече, легко", "Заметка клиента": "Нотатка клієнта", "<h3>План не помещается в ссылку</h3><p class=\"muted\">Telegram ограничивает длину ссылки. Сократите комментарии или названия упражнений, либо разделите план на два дня.</p><button class=\"btn wide\" data-a=\"close\">Понятно</button>": "<h3>План не вміщується в посилання</h3><p class=\"muted\">Telegram обмежує довжину посилання. Скоротіть коментарі чи назви вправ або розділіть план на два дні.</p><button class=\"btn wide\" data-a=\"close\">Зрозуміло</button>"});Object.assign(I18N.en,{"Ваша заметка": "Your note", "Комментарий тренера": "Coach’s comment", "Комментарий к подходу": "Set comment", "Например: пауза внизу, до отказа": "e.g. pause at the bottom, to failure", "Комментарий к упражнению: техника, темп, хват…": "Exercise comment: technique, tempo, grip…", "Комментарий к упражнению": "Exercise comment", "Комментарий к этому подходу (необязательно)": "Comment for this set (optional)", "Заметка к упражнению: самочувствие, техника…": "Exercise note: how it felt, technique…", "Заметка к упражнению": "Exercise note", "Нажмите на подход, чтобы добавить или изменить комментарий.": "Tap a set to add or edit its comment.", "Например: тяжело, болит плечо, лёгкий": "e.g. hard, shoulder hurts, easy", "Заметка клиента": "Client’s note", "<h3>План не помещается в ссылку</h3><p class=\"muted\">Telegram ограничивает длину ссылки. Сократите комментарии или названия упражнений, либо разделите план на два дня.</p><button class=\"btn wide\" data-a=\"close\">Понятно</button>": "<h3>The plan doesn’t fit into a link</h3><p class=\"muted\">Telegram limits link length. Shorten the comments or exercise names, or split the plan over two days.</p><button class=\"btn wide\" data-a=\"close\">Got it</button>"});
 Object.assign(I18N.uk,{'<div class="meta">рабочих подходов ':'<div class="meta">робочих підходів '});Object.assign(I18N.en,{'<div class="meta">рабочих подходов ':'<div class="meta">working sets '});
@@ -707,7 +716,8 @@ function viewActive(){
         '<button class="wtitle'+(a.pname?"":" empty")+'" data-a="ren" data-x="act">'+(a.pname?esc(a.pname):L("Добавить название тренировки"))+PEN+'</button><div class="stack">';
   for(const x of a.order){
     const sets=m.get(x)||[], et=totals(sets), open=S.openEx===x, d=draft(x), pi=a.plan?a.plan.find(i=>i.x===x):null, pw=pi?pi.s.filter(z=>!z[2]).length:0;
-    h+='<article class="ex'+(open?" open":"")+'"><header data-a="open" data-x="'+x+'" aria-expanded="'+open+'"><h3>'+esc(S.ex[x])+'</h3>'+
+    const pIdx=a.plan?a.plan.findIndex(i=>i.x===x):-1, sg=pIdx>=0?ssInfo(a.plan,pIdx):null;
+    h+='<article class="ex'+(open?" open":"")+(sg?" ss":"")+'"><header data-a="open" data-x="'+x+'" aria-expanded="'+open+'"><h3>'+(sg?'<span class="sst">'+L("Суперсет")+' '+sg.letter+' · '+sg.pos+'/'+sg.size+'</span><br>':"")+esc(S.ex[x])+'</h3>'+
        '<span class="meta'+(pi&&et.n>=pw?" done":"")+'">'+(pi? et.n+L(" из ")+pw+L(" подх.")+(et.n>=pw?" ✓":"") : (sets.length? et.n+L(" раб. подх.") : L("нет подходов")))+'</span></header>';
     if(open){
       h+='<div class="body">'+cnote(a.pc&&a.pc[x],"coach")+(pi?L('<div><div class="target">План</div>')+setLines(pi.s,sets.length)+'</div>':"")+'<div class="sets">'+chips(sets,rm,1,pi&&pi.s)+'</div>'+setComments(sets)+
@@ -959,7 +969,7 @@ function planCard(p){
   else if(isToday||past) act='<button class="btn primary wide" data-a="pstart" data-x="'+esc(p.id)+L('">Начать по плану</button>');
   const fold=p.who && !S.pOpen.has(p.id), ns=p.items.reduce((a,it)=>a+it.s.length,0);
   const list = fold ? '<div class="psum">'+p.items.length+' '+L("упр.")+' · '+ns+L(" подх.")+'</div>'
-    : '<ol class="plan-list">'+p.items.map((it,i)=>'<li><b>'+(i+1)+'. '+esc(S.ex[it.x]||"?")+'</b>'+(it.c?'<span class="cm">'+esc(it.c)+'</span>':"")+setLines(it.s)+'</li>').join("")+'</ol>';
+    : '<ol class="plan-list">'+p.items.map((it,i)=>'<li>'+ssTag(p.items,i)+'<b>'+(i+1)+'. '+esc(S.ex[it.x]||"?")+'</b>'+(it.c?'<span class="cm">'+esc(it.c)+'</span>':"")+setLines(it.s)+'</li>').join("")+'</ol>';
   const tog = p.who ? '<button class="pfold" data-a="ptog" data-x="'+esc(p.id)+'">'+(fold?L("Показать упражнения")+" ▾":L("Свернуть")+" ▴")+'</button>' : "";
   return '<div class="plan"><div class="plan-h"><div style="min-width:0"><div class="eyebrow">'+eb+'</div>'+
     '<h3 style="margin-top:4px">'+esc(p.name||L("Тренировка"))+'</h3></div>'+(p.who?"":'<button class="link" data-a="pedit" data-x="'+esc(p.id)+L('">Изменить</button>'))+'</div>'+
@@ -968,6 +978,15 @@ function planCard(p){
 /* the client's name as the coach wrote it in the plan (the report carries the client's Telegram name) */
 function repWho(r){ if(r.cw) return r.cw; const p=S.plans.find(p=>p.who&&(p.id===r.pid||p.done===r.id)); return (p&&p.who)||r.c||L("Клиент"); }
 const sameWho=(a,b)=>String(a||"").trim().toLowerCase()===String(b||"").trim().toLowerCase();
+/* supersets: item.ss=1 joins it to the previous item. Returns {letter, pos, size, members} for item i */
+function ssInfo(items,i){
+  const at=k=>items[k]&&(items[k].ss||items[k][3]===1);
+  if(!at(i)&&!at(i+1)) return null;
+  let a=i; while(a>0&&at(a)) a--; let b=i; while(at(b+1)) b++;
+  let n=0; for(let k=0;k<a;k++){ if(at(k+1)&&!at(k)) n++; }
+  return {letter:String.fromCharCode(65+n),pos:i-a+1,size:b-a+1,from:a,to:b};
+}
+const ssTag=(items,i)=>{ const g=ssInfo(items,i); return g?'<span class="sst">'+L("Суперсет")+' '+g.letter+' · '+g.pos+'/'+g.size+'</span>':""; };
 /* in the plan editor: what was actually done last time in this exercise
    (client plan: that client's latest report; own plan: my latest workout) */
 function prevFact(p,x){
@@ -1005,8 +1024,9 @@ function sheetPlan(){
   if(!p.items.length) h+=L('<div class="empty sm">Добавьте упражнения ниже.</div>');
   else h+=pctPanel(p);
   p.items.forEach((it,i)=>{
-    h+='<div class="pitem"><div class="pitem-h"><b>'+(i+1)+'. '+esc(S.ex[it.x]||"?")+' <button class="renb" style="padding:0 4px;vertical-align:-2px" data-a="ren" data-x="ex:'+it.x+':plan" aria-label="'+L("Переименовать упражнение")+'">'+PEN+'</button><span class="muted" style="font-weight:600;font-size:13px">· '+it.s.length+L(' подх.</span></b><button data-a="prm" data-x="')+i+L('" aria-label="Убрать упражнение">×</button></div>')+
-      prevFact(p,it.x)+'<button class="stepb" data-a="pstep" data-x="'+i+'">'+L("Шаг веса")+': <b>'+fstep(it.st||defStep())+'</b></button>'+
+    const sg=ssInfo(p.items,i);
+    h+='<div class="pitem'+(sg?" ss":"")+'">'+(sg?'<div><span class="sst">'+L("Суперсет")+' '+sg.letter+' · '+sg.pos+'/'+sg.size+'</span></div>':"")+'<div class="pitem-h"><b>'+(i+1)+'. '+esc(S.ex[it.x]||"?")+' <button class="renb" style="padding:0 4px;vertical-align:-2px" data-a="ren" data-x="ex:'+it.x+':plan" aria-label="'+L("Переименовать упражнение")+'">'+PEN+'</button><span class="muted" style="font-weight:600;font-size:13px">· '+it.s.length+L(' подх.</span></b><button data-a="prm" data-x="')+i+L('" aria-label="Убрать упражнение">×</button></div>')+
+      prevFact(p,it.x)+(i>0?'<button class="ssb" data-a="pss" data-x="'+i+'" aria-pressed="'+!!it.ss+'">⛓ '+(it.ss?L("В суперсете с «")+esc(S.ex[p.items[i-1].x]||"?")+"»":L("Суперсет с предыдущим"))+'</button>':"")+'<button class="stepb" data-a="pstep" data-x="'+i+'">'+L("Шаг веса")+': <b>'+fstep(it.st||defStep())+'</b></button>'+
       '<textarea class="cin" rows="1" data-pi="'+i+'" data-pc="ex" maxlength="100" placeholder="'+L("Комментарий к упражнению: техника, темп, хват…")+'" aria-label="'+L("Комментарий к упражнению")+'">'+esc(it.c||"")+'</textarea>'+
       it.s.map((st,j)=>setRow(i,j,st)).join("")+(it.s.length<12?'<button class="sadd" data-a="psadd" data-x="'+i+L('">+ Подход</button>'):"")+'</div>';
   });
@@ -1034,7 +1054,7 @@ async function encodeObj(o){
 }
 async function decodeObj(code){ const b=unb64u(code.slice(1)), raw=code[0]==="z"? await zip(b,true) : b; return JSON.parse(new TextDecoder().decode(raw)); }
 const clamp=(v,a,z)=>Math.min(z,Math.max(a,+v||0));
-const encodePlan=p=>encodeObj({v:1,c:coachName(),id:p.id,d:p.date,n:p.name||"",i:p.items.map(it=>{ const a=[S.ex[it.x]||"?",it.s.map(z=>{ const w=Math.round(z[0]*100)/100; return z[3]?[w,z[1],z[2]?1:0,z[3]]:z[2]?[w,z[1],1]:[w,z[1]]; })]; if(it.c) a.push(it.c); return a; })});
+const encodePlan=p=>encodeObj({v:1,c:coachName(),id:p.id,d:p.date,n:p.name||"",i:p.items.map(it=>{ const a=[S.ex[it.x]||"?",it.s.map(z=>{ const w=Math.round(z[0]*100)/100; return z[3]?[w,z[1],z[2]?1:0,z[3]]:z[2]?[w,z[1],1]:[w,z[1]]; })]; if(it.c||it.ss) a.push(it.c||""); if(it.ss) a.push(1); return a; })});
 async function decodePlan(code){
   try{
     const o=await decodeObj(code);
@@ -1116,7 +1136,7 @@ function sheetRecv(o,preview){
   return (preview?L('<div class="demo"><span>Так план увидит клиент, когда откроет ссылку.</span></div>'):"")+
     '<div class="eyebrow">'+(o.c?L("Тренер ")+esc(o.c):L("Тренер"))+L(' прислал тренировку</div><h1 style="margin:6px 0 4px">')+esc(o.n||L("Тренировка"))+'</h1>'+
     '<p class="muted" style="margin:0 0 14px">'+pdateLong(o.d)+'</p>'+
-    '<div class="plan"><ol class="plan-list">'+o.i.map((it,i)=>'<li><b>'+(i+1)+'. '+esc(it[0])+'</b>'+(it[2]?'<span class="cm">'+esc(it[2])+'</span>':"")+setLines(it[1])+'</li>').join("")+'</ol></div>'+
+    '<div class="plan"><ol class="plan-list">'+o.i.map((it,i)=>'<li>'+ssTag(o.i,i)+'<b>'+(i+1)+'. '+esc(it[0])+'</b>'+(it[2]?'<span class="cm">'+esc(it[2])+'</span>':"")+setLines(it[1])+'</li>').join("")+'</ol></div>'+
     (own&&!preview?L('<p class="note">На этот день у вас уже есть план «')+esc(own.name||L("Тренировка"))+L('». Он будет заменён.</p>'):"")+
     (preview?L('<button class="btn wide" style="margin-top:16px" data-a="close">Закрыть</button>')
             :L('<button class="btn primary wide" style="margin-top:16px" data-a="racc">Добавить в мои планы</button><button class="btn wide" style="margin-top:8px" data-a="close">Не сейчас</button>'));
@@ -1137,10 +1157,15 @@ function reportText(w){
 async function incoming(){
   if(!inTG) return;
   const sp=tg.initDataUnsafe && tg.initDataUnsafe.start_param; if(!sp) return;
-  if(!/^[zjrmg]/.test(sp)) return; // e.g. Telegram affiliate links (_tgr_…): nothing to open
+  if(!/^[zjrmgsq]/.test(sp)) return; // e.g. Telegram affiliate links (_tgr_…): nothing to open
   const h=hashStr(sp); if(S.seen.includes(h)) return;
   if(sp[0]==="m") return incomingMeal(sp,h);
   if(sp[0]==="g") return incomingGift(sp,h);
+  if(sp[0]==="s"||sp[0]==="q"){ // long plan / report kept on the server
+    let code=null; try{ const j=await api("/api/mplan/get",{id:sp.slice(1)}); code=j&&j.plan&&(sp[0]==="s"?j.plan.w:j.plan.r); }catch(_){}
+    if(typeof code!=="string"){ openSheet('<h3>'+L(sp[0]==="s"?"Не удалось открыть план":"Не удалось открыть отчёт")+'</h3><p class="muted">'+L("Ссылка устарела или сервер недоступен. Попросите отправить её ещё раз.")+'</p><button class="btn wide" data-a="close">'+L("Понятно")+'</button>',"err"); return; }
+    if(sp[0]==="q"){ const r=await decodeReport(code); if(!r) return; S._recvR={o:r,h}; openSheet(sheetReport(r,"new"),"recvR"); return; }
+    const o=await decodePlan(code); if(!o) return; S._recv={o,h}; openSheet(sheetRecv(o,false),"recv"); return; }
   if(sp[0]==="r"){ const r=await decodeReport(sp);
     if(!r){ openSheet(L('<h3>Не удалось открыть отчёт</h3><p class="muted">Ссылка повреждена. Попросите клиента отправить отчёт ещё раз.</p><button class="btn wide" data-a="close">Закрыть</button>'),"err"); return; }
     S._recvR={o:r,h}; openSheet(sheetReport(r,"new"),"recvR"); return; }
@@ -1689,6 +1714,7 @@ const A={
   pwhopick(x){ syncPe(); S.pe.who=x; rePe(); },
   async psend(id){ const p=S.plans.find(p=>p.id===id); if(!p) return; if(!has("coach")) return need("coach",L("Отправлять планы клиентам можно в тарифе «Коуч»."),()=>{});
     const code=await encodePlan(p);
+    if(code.length>512&&API&&inTG){ try{ const j=await api("/api/mplan/put",{plan:{k:"w",w:code}}); if(j&&j.id){ S._send={id,code,link:planLink("s"+j.id)}; openSheet(sheetSend(p,S._send.link),"send"); return; } }catch(_){} }
     if(code.length>512){ openSheet(L('<h3>План не помещается в ссылку</h3><p class="muted">Telegram ограничивает длину ссылки. Сократите комментарии или названия упражнений, либо разделите план на два дня.</p><button class="btn wide" data-a="close">Понятно</button>'),"err"); return; }
     S._send={id,code,link:planLink(code)}; openSheet(sheetSend(p,S._send.link),"send"); },
   sendtg(){ const sd=S._send, p=sd&&S.plans.find(p=>p.id===sd.id); if(!p) return;
@@ -1698,7 +1724,7 @@ const A={
     const p=S.plans.find(p=>p.id===sd.id); if(p){ p.sent=Date.now(); savePlans(); render(); } },
   async rprev(){ const sd=S._send; if(!sd) return; const o=await decodePlan(sd.code); if(o) openSheet(sheetRecv(o,true),"prev"); },
   racc(){ const r=S._recv; if(!r) return; const o=r.o;
-    const items=o.i.map(([n,ss,c])=>{ let i=S.ex.findIndex(e=>e.toLowerCase()===n.toLowerCase()); if(i<0){ S.ex.push(n); i=S.ex.length-1; } const it={x:i,s:ss}; if(c) it.c=c; return it; });
+    const items=o.i.map(([n,ss,c,j])=>{ let i=S.ex.findIndex(e=>e.toLowerCase()===n.toLowerCase()); if(i<0){ S.ex.push(n); i=S.ex.length-1; } const it={x:i,s:ss}; if(c) it.c=c; if(j===1) it.ss=1; return it; });
     saveEx();
     S.plans=S.plans.filter(p=>!(p.date===o.d && !p.who));
     S.plans.push({id:"p"+Date.now().toString(36),date:o.d,name:o.n,items,from:o.c||"-",cpid:o.id||undefined});
@@ -1706,7 +1732,9 @@ const A={
     S.seen=[r.h,...S.seen].slice(0,30); store.set("seen",JSON.stringify(S.seen));
     S._recv=null; haptic("ok"); closeSheet(); S.tab="train"; render(); window.scrollTo(0,0); },
   async report(id){ const w=S.hist.find(w=>w.id===id); if(!w) return;
-    const code="r"+await encodeObj(reportPayload(w)), fits=code.length<=512, link=fits?planLink(code):"https://t.me/"+BOT;
+    let code="r"+await encodeObj(reportPayload(w)), fits=code.length<=512;
+    if(!fits&&API&&inTG){ try{ const j=await api("/api/mplan/put",{plan:{k:"r",r:code}}); if(j&&j.id){ code="q"+j.id; fits=true; } }catch(_){} }
+    const link=fits?planLink(code):"https://t.me/"+BOT;
     const text=reportText(w)+(fits?L("\n\nНажмите на ссылку, чтобы открыть отчёт в приложении."):"");
     if(inTG){ shareTG(link,text); return; }
     S._rep=text+(fits?"\n"+link:""); S._repCode=fits?code:null;
@@ -1767,6 +1795,7 @@ const A={
     p.items.forEach(it=>it.s.forEach(z=>{ if(z.length>3 && !z[3]) z.length=3; if(z.length===3 && !z[2]) z.length=2; }));
     if(!p.date){ $("#perr").textContent=L("Выберите дату."); return; }
     if(!p.items.length){ $("#perr").textContent=L("Добавьте хотя бы одно упражнение."); return; }
+    delete p.items[0].ss;
     const other=S.plans.find(x=>x.date===p.date && x.id!==p.id && (x.who||"")===(p.who||""));
     if(other){ $("#perr").textContent=L("На ")+pdate(p.date)+L(" уже есть план. Выберите другую дату или измените тот план."); return; }
     if(!p.id){ p.id="p"+Date.now().toString(36); S.plans.push(p); } else { const k=S.plans.findIndex(x=>x.id===p.id); if(k>=0) S.plans[k]=p; else S.plans.push(p); }
@@ -1775,7 +1804,7 @@ const A={
     S.plans=S.plans.filter(p=>p.id!==S.pe.id); savePlans(); closeSheet(); render(); },
   pstart(id){ const p=S.plans.find(p=>p.id===id); if(!p) return; if(!p.from && !has("lite")) return need("lite",L("Чтобы записывать свои тренировки, нужен тариф «Лайт» или «Коуч»."),()=>{});
     if(S.act){ closeSheet(); S.tab="train"; render(); return; }
-    S.act={id:Date.now().toString(36),s:Date.now(),sets:[],order:p.items.map(i=>i.x),plan:p.items.map(i=>({x:i.x,s:i.s.map(z=>z.slice())})),pid:p.id,from:p.from||undefined,cpid:p.cpid||undefined,pname:p.name||"",pc:Object.fromEntries(p.items.filter(i=>i.c).map(i=>[i.x,i.c])),notes:{}};
+    S.act={id:Date.now().toString(36),s:Date.now(),sets:[],order:p.items.map(i=>i.x),plan:p.items.map(i=>({x:i.x,s:i.s.map(z=>z.slice()),...(i.ss?{ss:1}:{})})),pid:p.id,from:p.from||undefined,cpid:p.cpid||undefined,pname:p.name||"",pc:Object.fromEntries(p.items.filter(i=>i.c).map(i=>[i.x,i.c])),notes:{}};
     S.draft={}; p.items.forEach(i=>{ const f0=i.s[0]||[0,10]; S.draft[i.x]={w:f0[0],r:f0[1],wu:!!f0[2]}; });
     S.openEx=S.act.order[0]; S.rest.end=0; saveAct(); closeSheet(); S.tab="train"; haptic("medium"); render(); window.scrollTo(0,0); },
   cal(){ S._bw=null; S._met=null; openSheet(sheetCal(),"cal"); },
@@ -1812,6 +1841,11 @@ const A={
     const scI=$("#sc"); if(scI && +scI.dataset.x===x) d.c=clean(scI.value,40);
     const ns=[x,d.w,d.r,d.wu?1:0,Math.round((Date.now()-S.act.s)/1000)]; if(d.c) ns[5]=d.c; d.c=""; S.act.sets.push(ns); S.rest.hidden=0; saveAct(); haptic("medium");
     const pi=S.act.plan&&S.act.plan.find(i=>i.x===x); if(pi){ const nx=pi.s[S.act.sets.filter(z=>z[0]===x).length]; if(nx){ d.w=nx[0]; d.r=nx[1]; d.wu=!!nx[2]; } }
+    if(S.act.plan){ const k=S.act.plan.findIndex(i=>i.x===x), g=k>=0?ssInfo(S.act.plan,k):null;
+      if(g){ const left=j=>{ const it=S.act.plan[j]; return it.s.length-S.act.sets.filter(z=>z[0]===it.x).length; };
+        let nxt=null; for(let j=k+1;j<=g.to;j++) if(left(j)>0){ nxt=j; break; }
+        if(nxt!=null){ S.openEx=S.act.plan[nxt].x; S.rest.hidden=lastSetTime(); } // straight to the next exercise, no rest
+        else { for(let j=g.from;j<=g.to;j++) if(left(j)>0){ S.openEx=S.act.plan[j].x; break; } } } }
     render(); },
   undo(x){ x=+x; for(let i=S.act.sets.length-1;i>=0;i--){ if(S.act.sets[i][0]===x){ S.act.sets.splice(i,1); break; } } saveAct(); haptic(); render(); },
   finish(){
@@ -1835,6 +1869,7 @@ const A={
 };
 
 Object.assign(A,FOOD_A);
+Object.assign(A,{ pss(i){ syncPe(); const it=S.pe.items[+i]; if(!it) return; if(it.ss) delete it.ss; else it.ss=1; haptic("light"); rePe(); } });
 Object.assign(A,{ punit(x){ if(typeof syncPe==="function") syncPe(); S.unit=x==="lb"?"lb":"kg"; saveCfg(); haptic("light"); rePe(); render(); } });
 Object.assign(A,{
   calm(k){ S.calM=k==="m"; try{ localStorage.setItem('tb_calm',S.calM?'1':'0'); }catch(_){} haptic("light"); render(); },
@@ -1855,7 +1890,7 @@ function planFromReport(r,useFact){
     const work=useFact&&done.length?[...done,...plw.slice(done.length)]:plw; // sets the client skipped stay as planned
     if(!wu.length&&!work.length) continue;
     const it={x,s:[...wu,...work]}; const oi=orig&&orig.items.find(i=>i.x===x);
-    if(oi){ if(oi.c) it.c=oi.c; if(oi.st) it.st=oi.st; }
+    if(oi){ if(oi.c) it.c=oi.c; if(oi.st) it.st=oi.st; if(oi.ss) it.ss=1; }
     items.push(it);
   }
   let d=addDays(fromKey(r.d),7); const today=new Date(); today.setHours(0,0,0,0); while(d<=today) d=addDays(d,7);
