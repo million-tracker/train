@@ -52,7 +52,7 @@ h3{font:700 17px/1.25 var(--body)}
 .hero{background:var(--card);border-radius:var(--r);padding:22px 18px 18px;display:flex;flex-direction:column;gap:14px}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
 .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.tile{background:var(--card);border-radius:14px;padding:12px;min-width:0}
+.tile{background:var(--card);border-radius:14px;padding:12px;min-width:0;border:1.5px solid color-mix(in srgb,var(--fg) 12%,transparent)}
 .tile .num{font-size:19px;font-weight:600;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tile small{font-size:12px;color:var(--muted)}
 
@@ -96,9 +96,10 @@ h3{font:700 17px/1.25 var(--body)}
 .toggle{border-radius:14px;padding:0 14px;font-weight:700;font-size:14px;border:1.5px solid var(--line);color:var(--muted)}
 .toggle[aria-pressed="true"]{border-color:var(--fg);color:var(--fg);background:var(--surface)}
 
-.addex{border:1.5px dashed var(--line);border-radius:var(--r);padding:16px;font-weight:700;color:var(--muted);width:100%}
+.addex{border:2px dashed color-mix(in srgb,var(--accent) 70%,transparent);background:color-mix(in srgb,var(--accent) 8%,transparent);border-radius:var(--r);padding:16px;font-weight:700;color:var(--accent);width:100%}
+.addex:active{background:color-mix(in srgb,var(--accent) 16%,transparent)}
 
-.hist{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;background:var(--card);border-radius:var(--r);padding:12px 14px;width:100%;text-align:left}
+.hist{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;background:var(--card);border-radius:var(--r);padding:12px 14px;width:100%;text-align:left;border:1.5px solid color-mix(in srgb,var(--fg) 12%,transparent)}
 .hist .d{text-align:center;line-height:1}
 .hist .d .num{font-size:22px;font-weight:600;display:block}
 .hist .d small{font-size:11px;color:var(--muted);text-transform:uppercase;font-weight:700;letter-spacing:.06em}
@@ -175,7 +176,7 @@ h3{font:700 17px/1.25 var(--body)}
 .hist .names b{color:var(--fg)}
 .psum{font-size:14px;color:var(--muted);font-weight:600}
 .pfold{align-self:flex-start;color:var(--accent);font-size:14px;font-weight:700;padding:2px 0}
-.plan{background:var(--card);border-radius:var(--r);padding:14px 16px;display:flex;flex-direction:column;gap:10px;border:1.5px dashed color-mix(in srgb,var(--accent) 50%,transparent)}
+.plan{background:var(--card);border-radius:var(--r);padding:14px 16px;display:flex;flex-direction:column;gap:10px;border:2px solid color-mix(in srgb,var(--accent) 75%,transparent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 10%,transparent)}
 .plan-h{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 .plan-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
 .plan-list>li{display:flex;flex-direction:column;gap:2px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
@@ -244,7 +245,18 @@ button.chip{cursor:pointer}
 .clist li:before{content:"💬 "}
 .snb{height:34px;border-radius:9px;font:800 12px/1 var(--body);color:var(--muted);background:transparent;border:1.5px dashed transparent}
 .snb:hover{border-color:var(--line)}
-.snb.wu{background:var(--surface);color:var(--accent);border-color:var(--accent)}
+.snb.wu{background:color-mix(in srgb,#F2B233 18%,transparent);color:#F2B233;border:1.5px dashed #F2B233}
+.srow .snb:not(.wu){color:var(--fg);background:var(--surface)}
+.srow.wu .mini{background:color-mix(in srgb,#F2B233 10%,var(--surface));box-shadow:inset 0 0 0 1.5px color-mix(in srgb,#F2B233 70%,transparent)}
+.srow.wk .mini{box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--accent) 45%,transparent)}
+.mini small.alt{display:block;text-transform:none;letter-spacing:0;font-weight:700;color:var(--muted);font-size:10px;line-height:1.1}
+.useg{display:inline-grid;grid-template-columns:1fr 1fr;gap:3px;background:var(--surface);border-radius:10px;padding:3px}
+.useg button{height:30px;padding:0 14px;border-radius:8px;border:0;background:transparent;color:var(--muted);font:700 13px var(--body);cursor:pointer}
+.useg button[aria-pressed="true"]{background:var(--card);color:var(--fg)}
+.uhead{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.wleg{display:flex;gap:14px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+.wleg span{display:inline-flex;align-items:center;gap:6px}
+.wleg i{width:14px;height:10px;border-radius:3px}
 .stepb{align-self:flex-start;border-radius:999px;padding:5px 10px;background:var(--surface);font-weight:700;font-size:12px;color:var(--muted)}
 .stepb b{color:var(--fg)}
 .pct{background:var(--card);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px;border:1.5px solid var(--line)}
@@ -290,7 +302,7 @@ button.chip{cursor:pointer}
 .seg button[aria-pressed="true"]{border-color:var(--accent)}
 .err{color:var(--accent);font-size:13px;min-height:18px;margin:6px 2px 0}
 
-.week{background:var(--card);border-radius:var(--r);padding:12px}
+.week{background:var(--card);border-radius:var(--r);padding:12px;border:1.5px solid color-mix(in srgb,var(--fg) 12%,transparent)}
 .week-head{display:grid;grid-template-columns:40px 1fr 40px;align-items:center;text-align:center;gap:8px}
 .week-head button{height:40px;border-radius:12px;background:var(--surface);font:600 20px/1 var(--body)}
 .week-head button:disabled{opacity:.3;cursor:default}
@@ -325,7 +337,7 @@ button.chip{cursor:pointer}
 .mday .dots{display:flex;gap:3px;height:7px}
 .mday i.cl{background:var(--accent)}
 .mday.sel{background:var(--surface)}
-.hrows{display:flex;flex-direction:column;background:var(--card);border-radius:var(--r);overflow:hidden}
+.hrows{display:flex;flex-direction:column;background:var(--card);border-radius:var(--r);overflow:hidden;border:1.5px solid color-mix(in srgb,var(--fg) 12%,transparent)}
 .hrow{display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center;padding:11px 14px;background:transparent;border:0;border-top:1px solid var(--line);color:var(--fg);text-align:left;cursor:pointer;font:inherit}
 .hrow:first-child{border-top:0}
 .hrow .dd{text-align:center;line-height:1.05}
@@ -451,6 +463,7 @@ Object.assign(I18N.uk,{"Сделано в прошлый раз": "Зробле�
 Object.assign(I18N.uk,{"Неделя": "Тиждень", "Месяц": "Місяць", "Предыдущий месяц": "Попередній місяць", "Следующий месяц": "Наступний місяць", "Этот месяц": "Цей місяць", ", план": ", план", "тренировка": "тренування", "план": "план", "тренировок": "тренувань", "запланировано": "заплановано", "На этот день ничего не запланировано.": "На цей день нічого не заплановано.", "Календарь": "Календар", "Запланировано": "Заплановано"});Object.assign(I18N.en,{"Неделя": "Week", "Месяц": "Month", "Предыдущий месяц": "Previous month", "Следующий месяц": "Next month", "Этот месяц": "This month", ", план": ", plan", "тренировка": "workout", "план": "plan", "тренировок": "workouts", "запланировано": "planned", "На этот день ничего не запланировано.": "Nothing planned for this day.", "Календарь": "Calendar", "Запланировано": "Planned"});
 Object.assign(I18N.uk,{"Все": "Усі", "К сегодня": "До сьогодні", "мои": "мої", "клиенты": "клієнти", "тренир.": "тренув.", "отчёт.": "звіт.", "В этом месяце пока пусто": "У цьому місяці поки порожньо", "Весь месяц": "Увесь місяць", "За месяц": "За місяць", "В этом месяце тренировок нет.": "У цьому місяці тренувань немає.", "Тренировка": "Тренування", "упр.": "впр."});Object.assign(I18N.en,{"Все": "All", "К сегодня": "Back to today", "мои": "mine", "клиенты": "clients", "тренир.": "workouts", "отчёт.": "reports", "В этом месяце пока пусто": "Nothing this month yet", "Весь месяц": "Whole month", "За месяц": "This month", "В этом месяце тренировок нет.": "No workouts this month.", "Тренировка": "Workout", "упр.": "ex."});
 Object.assign(I18N.uk,{"Чей календарь": "Чий календар", "Мои тренировки": "Мої тренування", "отчёт": "звіт", " раб. подх.": " роб. підх."});Object.assign(I18N.en,{"Чей календарь": "Whose calendar", "Мои тренировки": "My workouts", "отчёт": "report", " раб. подх.": " working sets"});
+Object.assign(I18N.uk,{"Единицы": "Одиниці", "разминочный (Р)": "розминковий (Р)", "рабочий": "робочий"});Object.assign(I18N.en,{"Единицы": "Units", "разминочный (Р)": "warm-up (W)", "рабочий": "working"});
 Object.assign(I18N.uk,{"Коуч": "Коуч", "Лайт": "Лайт", "Тариф": "Тариф", "демо": "демо", "Подписка не активна": "Підписка не активна", "Пробный период": "Пробний період", "до ": "до ", "Выбрать тариф": "Вибрати тариф", "Тарифы": "Тарифи", "дней": "днів", "Активен до ": "Активний до ", ", продлится автоматически": ", подовжиться автоматично", ", автопродление выключено": ", автоподовження вимкнено", "Входит в тариф «Коуч»": "Входить до тарифу «Коуч»", "Оформить за": "Оформити за", "Тарифы Million": "Тарифи Million", "Сейчас идёт пробный период с полным доступом до ": "Зараз триває пробний період з повним доступом до ", "Это демо: оплата работает только в Telegram.": "Це демо: оплата працює лише в Telegram.", "Свои тренировки и планы": "Власні тренування та плани", "Таймер отдыха со звуком": "Таймер відпочинку зі звуком", "История, календарь и прогресс": "Історія, календар і прогрес", "Тренировки по планам от тренера": "Тренування за планами від тренера", "Всё из тарифа «Лайт»": "Усе з тарифу «Лайт»", "Планы для клиентов с весами по подходам": "Плани для клієнтів з вагами за підходами", "Отправка планов в Telegram": "Надсилання планів у Telegram", "Отчёты клиентов: план и факт": "Звіти клієнтів: план і факт", "Для тренеров": "Для тренерів", "Оплата в Telegram Stars. Подписка продлевается каждые 30 дней. Отменить можно в Telegram: Настройки → Мои звёзды. Помощь с оплатой: команда /paysupport в боте.": "Оплата в Telegram Stars. Підписка подовжується кожні 30 днів. Скасувати можна в Telegram: Налаштування → Мої зірки. Допомога з оплатою: команда /paysupport у боті.", "Чтобы записывать свои тренировки, нужен тариф «Лайт» или «Коуч».": "Щоб записувати власні тренування, потрібен тариф «Лайт» або «Коуч».", "Планы для клиентов доступны в тарифе «Коуч».": "Плани для клієнтів доступні в тарифі «Коуч».", "Планировать тренировки можно в тарифе «Лайт» или «Коуч».": "Планувати тренування можна в тарифі «Лайт» або «Коуч».", "Отправлять планы клиентам можно в тарифе «Коуч».": "Надсилати плани клієнтам можна в тарифі «Коуч».", "Сохранять отчёты клиентов можно в тарифе «Коуч».": "Зберігати звіти клієнтів можна в тарифі «Коуч».", "Оплата работает только внутри Telegram.": "Оплата працює лише всередині Telegram.", "Открываем оплату…": "Відкриваємо оплату…", "Оплата прошла, включаем тариф…": "Оплата пройшла, вмикаємо тариф…", "Оплата не прошла. Попробуйте ещё раз.": "Оплата не пройшла. Спробуйте ще раз.", "Не удалось связаться с сервером оплаты. Проверьте интернет и попробуйте ещё раз.": "Не вдалося зв’язатися з сервером оплати. Перевірте інтернет і спробуйте ще раз."});Object.assign(I18N.en,{"Коуч": "Coach", "Лайт": "Lite", "Тариф": "Plan", "демо": "demo", "Подписка не активна": "No active subscription", "Пробный период": "Free trial", "до ": "until ", "Выбрать тариф": "Choose a plan", "Тарифы": "Plans", "дней": "days", "Активен до ": "Active until ", ", продлится автоматически": ", renews automatically", ", автопродление выключено": ", auto-renewal is off", "Входит в тариф «Коуч»": "Included in Coach", "Оформить за": "Subscribe for", "Тарифы Million": "Million plans", "Сейчас идёт пробный период с полным доступом до ": "Your free trial with full access runs until ", "Это демо: оплата работает только в Telegram.": "This is a demo: payment works only in Telegram.", "Свои тренировки и планы": "Your own workouts and plans", "Таймер отдыха со звуком": "Rest timer with sound", "История, календарь и прогресс": "History, calendar and progress", "Тренировки по планам от тренера": "Workouts from your coach’s plans", "Всё из тарифа «Лайт»": "Everything in Lite", "Планы для клиентов с весами по подходам": "Client plans with per-set weights", "Отправка планов в Telegram": "Send plans via Telegram", "Отчёты клиентов: план и факт": "Client reports: plan vs actual", "Для тренеров": "For coaches", "Оплата в Telegram Stars. Подписка продлевается каждые 30 дней. Отменить можно в Telegram: Настройки → Мои звёзды. Помощь с оплатой: команда /paysupport в боте.": "Paid in Telegram Stars. The subscription renews every 30 days. Cancel any time in Telegram: Settings → My Stars. Payment help: send /paysupport to the bot.", "Чтобы записывать свои тренировки, нужен тариф «Лайт» или «Коуч».": "To log your own workouts you need the Lite or Coach plan.", "Планы для клиентов доступны в тарифе «Коуч».": "Client plans are part of the Coach plan.", "Планировать тренировки можно в тарифе «Лайт» или «Коуч».": "Planning workouts needs the Lite or Coach plan.", "Отправлять планы клиентам можно в тарифе «Коуч».": "Sending plans to clients is part of the Coach plan.", "Сохранять отчёты клиентов можно в тарифе «Коуч».": "Saving client reports is part of the Coach plan.", "Оплата работает только внутри Telegram.": "Payment works only inside Telegram.", "Открываем оплату…": "Opening payment…", "Оплата прошла, включаем тариф…": "Payment received, activating your plan…", "Оплата не прошла. Попробуйте ещё раз.": "Payment failed. Please try again.", "Не удалось связаться с сервером оплаты. Проверьте интернет и попробуйте ещё раз.": "Couldn’t reach the payment server. Check your connection and try again."});
 Object.assign(I18N.uk,{"Ваша заметка": "Ваша нотатка", "Комментарий тренера": "Коментар тренера", "Комментарий к подходу": "Коментар до підходу", "Например: пауза внизу, до отказа": "Наприклад: пауза внизу, до відмови", "Комментарий к упражнению: техника, темп, хват…": "Коментар до вправи: техніка, темп, хват…", "Комментарий к упражнению": "Коментар до вправи", "Комментарий к этому подходу (необязательно)": "Коментар до цього підходу (необов’язково)", "Заметка к упражнению: самочувствие, техника…": "Нотатка до вправи: самопочуття, техніка…", "Заметка к упражнению": "Нотатка до вправи", "Нажмите на подход, чтобы добавить или изменить комментарий.": "Натисніть на підхід, щоб додати або змінити коментар.", "Например: тяжело, болит плечо, лёгкий": "Наприклад: важко, болить плече, легко", "Заметка клиента": "Нотатка клієнта", "<h3>План не помещается в ссылку</h3><p class=\"muted\">Telegram ограничивает длину ссылки. Сократите комментарии или названия упражнений, либо разделите план на два дня.</p><button class=\"btn wide\" data-a=\"close\">Понятно</button>": "<h3>План не вміщується в посилання</h3><p class=\"muted\">Telegram обмежує довжину посилання. Скоротіть коментарі чи назви вправ або розділіть план на два дні.</p><button class=\"btn wide\" data-a=\"close\">Зрозуміло</button>"});Object.assign(I18N.en,{"Ваша заметка": "Your note", "Комментарий тренера": "Coach’s comment", "Комментарий к подходу": "Set comment", "Например: пауза внизу, до отказа": "e.g. pause at the bottom, to failure", "Комментарий к упражнению: техника, темп, хват…": "Exercise comment: technique, tempo, grip…", "Комментарий к упражнению": "Exercise comment", "Комментарий к этому подходу (необязательно)": "Comment for this set (optional)", "Заметка к упражнению: самочувствие, техника…": "Exercise note: how it felt, technique…", "Заметка к упражнению": "Exercise note", "Нажмите на подход, чтобы добавить или изменить комментарий.": "Tap a set to add or edit its comment.", "Например: тяжело, болит плечо, лёгкий": "e.g. hard, shoulder hurts, easy", "Заметка клиента": "Client’s note", "<h3>План не помещается в ссылку</h3><p class=\"muted\">Telegram ограничивает длину ссылки. Сократите комментарии или названия упражнений, либо разделите план на два дня.</p><button class=\"btn wide\" data-a=\"close\">Понятно</button>": "<h3>The plan doesn’t fit into a link</h3><p class=\"muted\">Telegram limits link length. Shorten the comments or exercise names, or split the plan over two days.</p><button class=\"btn wide\" data-a=\"close\">Got it</button>"});
 Object.assign(I18N.uk,{'<div class="meta">рабочих подходов ':'<div class="meta">робочих підходів '});Object.assign(I18N.en,{'<div class="meta">рабочих подходов ':'<div class="meta">working sets '});
@@ -917,7 +930,9 @@ function piText(it){ const s=it.s||[]; if(!s.length) return "";
   return s.map(z=>(z[0]>0?fw(z[0])+"×":"")+z[1]).join(", ")+(hasW?" "+U():L(" повт.")); }
 function pctPanel(p){
   const sc=p._scope||"all", pc=p._pct!=null?p._pct:5, wuN=p.items.reduce((a,it)=>a+it.s.filter(z=>z[2]).length,0);
-  return '<div class="pct"><b>'+L("Изменить веса на %")+'</b>'+
+  return '<div class="pct"><div class="uhead"><b>'+L("Единицы")+'</b><div class="useg" role="group"><button data-a="punit" data-x="kg" aria-pressed="'+!isLb()+'">кг</button><button data-a="punit" data-x="lb" aria-pressed="'+isLb()+'">lb</button></div></div>'+
+    '<div class="wleg"><span><i style="box-shadow:inset 0 0 0 1.5px #F2B233;background:color-mix(in srgb,#F2B233 12%,transparent)"></i>'+L("разминочный (Р)")+'</span><span><i style="box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--accent) 60%,transparent)"></i>'+L("рабочий")+'</span></div>'+
+    '<b style="margin-top:4px">'+L("Изменить веса на %")+'</b>'+
     '<div class="pct-row"><button data-a="ppctv" data-x="-1" aria-label="'+L("Меньше процентов")+'">−</button><label class="pct-in"><input id="ppct" inputmode="decimal" value="'+pc+'" aria-label="'+L("Процент")+'"><span>%</span></label><button data-a="ppctv" data-x="1" aria-label="'+L("Больше процентов")+'">+</button></div>'+
     '<div class="seg three">'+[["all",L("Все подходы")],["wu",L("Разминочные")],["work",L("Рабочие")]].map(([k,t])=>'<button data-a="pscope" data-x="'+k+'" aria-pressed="'+(sc===k)+'"><b>'+t+'</b></button>').join("")+'</div>'+
     (sc==="wu"&&!wuN?'<div class="pct-msg">'+L("В плане нет разминочных подходов. Нажмите на номер подхода, чтобы отметить его как разминочный.")+'</div>':"")+
@@ -929,7 +944,7 @@ function pctPanel(p){
 function setRow(i,j,st,only){
   const mini=(f,val,lab,mode,aria)=>'<div class="mini"><button data-a="pst" data-x="'+i+':'+j+':'+f+':-1" aria-label="'+aria+L(', меньше">−</button><div><input class="mi" data-pi="')+i+'" data-pj="'+j+'" data-pf="'+f+'" inputmode="'+mode+'" value="'+val+'"'+(f==="w"?' placeholder="—"':"")+L(' aria-label="Подход ')+(j+1)+', '+aria+'"><small>'+lab+'</small></div><button data-a="pst" data-x="'+i+':'+j+':'+f+':1" aria-label="'+aria+L(', больше">+</button></div>');
   const it=S.pe.items[i], wn=it.s.slice(0,j+1).filter(z=>!z[2]).length;
-  return '<div class="srow"><button class="snb'+(st[2]?" wu":"")+'" data-a="pswu" data-x="'+i+':'+j+'" aria-pressed="'+!!st[2]+'" aria-label="'+(st[2]?L("Разминочный подход: нажмите, чтобы сделать рабочим"):L("Рабочий подход: нажмите, чтобы сделать разминочным"))+'">'+(st[2]?L("Р"):wn)+'</button>'+mini("w",st[0]>0?r2(toU(st[0])):"",U(),"decimal",L("вес"))+mini("r",st[1],L("повт."),"numeric",L("повторы"))+
+  return '<div class="srow '+(st[2]?"wu":"wk")+'"><button class="snb'+(st[2]?" wu":"")+'" data-a="pswu" data-x="'+i+':'+j+'" aria-pressed="'+!!st[2]+'" aria-label="'+(st[2]?L("Разминочный подход: нажмите, чтобы сделать рабочим"):L("Рабочий подход: нажмите, чтобы сделать разминочным"))+'">'+(st[2]?L("Р"):wn)+'</button>'+mini("w",st[0]>0?r2(toU(st[0])):"",U()+(st[0]>0?'<small class="alt">≈ '+(isLb()?fmt(Math.round(st[0]*10)/10)+L(" кг"):fmt(Math.round(st[0]*LB*10)/10)+" lb")+'</small>':""),"decimal",L("вес"))+mini("r",st[1],L("повт."),"numeric",L("повторы"))+
     '<button class="scm'+(st[3]?" on":"")+'" data-a="pscm" data-x="'+i+':'+j+'" aria-label="'+L("Комментарий к подходу")+'">'+CMT_SVG+'</button>'+
     '<button class="sdel" data-a="psdel" data-x="'+i+':'+j+L('" aria-label="Удалить подход ')+(j+1)+'">×</button></div>'+
     (st[3]!=null&&st[3]!==undefined&&(st[3]||S.pe._oc===i+":"+j) ? '<input class="cin sm" data-pi="'+i+'" data-pj="'+j+'" data-pc="set" maxlength="40" value="'+esc(st[3]||"")+'" placeholder="'+L("Например: пауза внизу, до отказа")+'" aria-label="'+L("Комментарий к подходу")+' '+(j+1)+'">' : ""); }
@@ -1820,6 +1835,7 @@ const A={
 };
 
 Object.assign(A,FOOD_A);
+Object.assign(A,{ punit(x){ if(typeof syncPe==="function") syncPe(); S.unit=x==="lb"?"lb":"kg"; saveCfg(); haptic("light"); rePe(); render(); } });
 Object.assign(A,{
   calm(k){ S.calM=k==="m"; try{ localStorage.setItem('tb_calm',S.calM?'1':'0'); }catch(_){} haptic("light"); render(); },
   mnav(d){ S.mOff+=+d; S.mSel=null; haptic("light"); render(); },
