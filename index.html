@@ -1452,6 +1452,7 @@ function viewFood(){
   if(showEat && meals.length){ const et=sumT(meals.filter((_,i)=>S.eat.includes(i)).map(mealT));
     h+='<div class="pct-msg">'+L("Съедено сегодня: ")+fK(et.k)+' '+L("ккал")+' · '+L("Б")+' '+fG(et.p)+' · '+L("Ж")+' '+fG(et.f)+' · '+L("У")+' '+fG(et.c)+'</div>'; }
   if(editable) h+='<button class="addex" data-a="mpaddmeal">+ '+L("Приём пищи")+'</button>'+
+    '<button class="btn primary wide" style="margin:10px 0" data-a="mptarget">✨ '+L("Рассчитать КБЖУ и составить меню")+'</button>'+
     '<div class="btnrow"><button class="btn" data-a="mpcopy">'+L("Копировать день")+'</button><button class="btn" data-a="mpclear">'+(S.confirm==="mpclear"?L("Нажмите ещё раз"):L("Очистить день"))+'</button></div>';
   h+='</div><p class="note">'+L("Калорийность продуктов из списка приблизительная (на 100 г). Для точности сверяйтесь с упаковкой.")+'</p>';
   return h;
