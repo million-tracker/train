@@ -52,6 +52,7 @@ h3{font:700 17px/1.25 var(--body)}
 .hero{background:var(--card);border-radius:var(--r);padding:22px 18px 18px;display:flex;flex-direction:column;gap:14px}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
 .tiles.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.glbl{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 6px 2px}
 .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .tile{background:var(--card);border-radius:14px;padding:12px;min-width:0;border:1.5px solid color-mix(in srgb,var(--fg) 12%,transparent)}
 .tile .num{font-size:19px;font-weight:600;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -491,6 +492,7 @@ Object.assign(I18N.uk,{"Готовим ссылку…": "Готуємо пос�
 Object.assign(I18N.uk,{"Ваш вес для подсчёта расхода калорий:": "Ваша вага для підрахунку витрати калорій:", "Укажите свой вес для подсчёта расхода калорий": "Вкажіть свою вагу для підрахунку витрати калорій", "Указать": "Вказати", "Изменить": "Змінити"});Object.assign(I18N.en,{"Ваш вес для подсчёта расхода калорий:": "Your weight for calories burned:", "Укажите свой вес для подсчёта расхода калорий": "Enter your weight to count calories burned", "Указать": "Set", "Изменить": "Change"});
 Object.assign(I18N.uk,{"Выбрать язык": "Вибрати мову", "Выбрать тариф": "Вибрати тариф"});Object.assign(I18N.en,{"Выбрать язык": "Choose language", "Выбрать тариф": "Choose plan"});
 Object.assign(I18N.uk,{"ккал съедено": "ккал з’їдено", "ккал сожжено": "ккал спалено", "отмечайте приёмы пищи в «Питании»": "позначайте прийоми їжі в «Харчуванні»", "укажите свой вес выше": "вкажіть свою вагу вище"});Object.assign(I18N.en,{"ккал съедено": "kcal eaten", "ккал сожжено": "kcal burned", "отмечайте приёмы пищи в «Питании»": "mark meals as eaten in Nutrition", "укажите свой вес выше": "enter your weight above"});
+Object.assign(I18N.uk,{"+ Тренировка": "+ Тренування", "Программа": "Програма", "Программа тренировок": "Програма тренувань", "Приложение составит программу на несколько недель и расставит тренировки в календаре. Потом любую тренировку можно изменить.": "Застосунок складе програму на кілька тижнів і розставить тренування в календарі. Потім будь-яке тренування можна змінити.", "Цель": "Мета", "Сила": "Сила", "Масса": "Маса", "Рельеф": "Рельєф", "Уровень": "Рівень", "Новичок": "Новачок", "Средний": "Середній", "Опытный": "Досвідчений", "Тренировок в неделю": "Тренувань на тиждень", "Дни недели": "Дні тижня", "Длительность": "Тривалість", "4 нед.": "4 тиж.", "6 нед.": "6 тиж.", "8 нед.": "8 тиж.", "Где тренируетесь": "Де тренуєтесь", "Зал": "Зал", "Дома, гантели": "Вдома, гантелі", "Выберите столько дней, сколько тренировок в неделю: ": "Оберіть стільки днів, скільки тренувань на тиждень: ", "Неделя 1": "Тиждень 1", "+ разминка": "+ розминка", "Веса подобраны по вашей истории тренировок. ": "Ваги підібрано за вашою історією тренувань. ", "Веса не указаны: впишите их в первой тренировке или после пары тренировок пересоздайте программу — веса подберутся по истории. ": "Ваги не вказано: впишіть їх у першому тренуванні або після кількох тренувань створіть програму заново — ваги підберуться за історією. ", "Каждую неделю нагрузка немного растёт": "Щотижня навантаження трохи зростає", ", последняя неделя — разгрузочная.": ", останній тиждень — розвантажувальний.", "Добавить в календарь": "Додати в календар", "трен.": "трен.", "Удалить прошлую сгенерированную программу": "Видалити попередню згенеровану програму", "Программа готова": "Програма готова", "Добавлено тренировок: ": "Додано тренувань: ", ". Пропущено дней, где уже был план: ": ". Пропущено днів, де вже був план: ", "Открыть календарь": "Відкрити календар", "Свои планы тренировок доступны в тарифе «Лайт» или «Коуч».": "Власні плани тренувань доступні в тарифі «Лайт» або «Коуч»."});Object.assign(I18N.en,{"+ Тренировка": "+ Workout", "Программа": "Program", "Программа тренировок": "Training program", "Приложение составит программу на несколько недель и расставит тренировки в календаре. Потом любую тренировку можно изменить.": "The app builds a multi-week program and puts the workouts in your calendar. You can edit any workout later.", "Цель": "Goal", "Сила": "Strength", "Масса": "Muscle", "Рельеф": "Tone", "Уровень": "Level", "Новичок": "Beginner", "Средний": "Intermediate", "Опытный": "Advanced", "Тренировок в неделю": "Workouts per week", "Дни недели": "Days of the week", "Длительность": "Duration", "4 нед.": "4 wk", "6 нед.": "6 wk", "8 нед.": "8 wk", "Где тренируетесь": "Where you train", "Зал": "Gym", "Дома, гантели": "Home, dumbbells", "Выберите столько дней, сколько тренировок в неделю: ": "Pick as many days as workouts per week: ", "Неделя 1": "Week 1", "+ разминка": "+ warm-up", "Веса подобраны по вашей истории тренировок. ": "Weights are based on your workout history. ", "Веса не указаны: впишите их в первой тренировке или после пары тренировок пересоздайте программу — веса подберутся по истории. ": "No weights yet: enter them in your first workout, or rebuild the program after a few workouts to get weights from your history. ", "Каждую неделю нагрузка немного растёт": "The load grows a little every week", ", последняя неделя — разгрузочная.": ", the last week is a deload.", "Добавить в календарь": "Add to calendar", "трен.": "workouts", "Удалить прошлую сгенерированную программу": "Delete the previous generated program", "Программа готова": "Program ready", "Добавлено тренировок: ": "Workouts added: ", ". Пропущено дней, где уже был план: ": ". Skipped days that already had a plan: ", "Открыть календарь": "Open calendar", "Свои планы тренировок доступны в тарифе «Лайт» или «Коуч».": "Your own workout plans need the Lite or Coach plan."});
 Object.assign(I18N.uk,{"Коуч": "Коуч", "Лайт": "Лайт", "Тариф": "Тариф", "демо": "демо", "Подписка не активна": "Підписка не активна", "Пробный период": "Пробний період", "до ": "до ", "Выбрать тариф": "Вибрати тариф", "Тарифы": "Тарифи", "дней": "днів", "Активен до ": "Активний до ", ", продлится автоматически": ", подовжиться автоматично", ", автопродление выключено": ", автоподовження вимкнено", "Входит в тариф «Коуч»": "Входить до тарифу «Коуч»", "Оформить за": "Оформити за", "Тарифы Million": "Тарифи Million", "Сейчас идёт пробный период с полным доступом до ": "Зараз триває пробний період з повним доступом до ", "Это демо: оплата работает только в Telegram.": "Це демо: оплата працює лише в Telegram.", "Свои тренировки и планы": "Власні тренування та плани", "Таймер отдыха со звуком": "Таймер відпочинку зі звуком", "История, календарь и прогресс": "Історія, календар і прогрес", "Тренировки по планам от тренера": "Тренування за планами від тренера", "Всё из тарифа «Лайт»": "Усе з тарифу «Лайт»", "Планы для клиентов с весами по подходам": "Плани для клієнтів з вагами за підходами", "Отправка планов в Telegram": "Надсилання планів у Telegram", "Отчёты клиентов: план и факт": "Звіти клієнтів: план і факт", "Для тренеров": "Для тренерів", "Оплата в Telegram Stars. Подписка продлевается каждые 30 дней. Отменить можно в Telegram: Настройки → Мои звёзды. Помощь с оплатой: команда /paysupport в боте.": "Оплата в Telegram Stars. Підписка подовжується кожні 30 днів. Скасувати можна в Telegram: Налаштування → Мої зірки. Допомога з оплатою: команда /paysupport у боті.", "Чтобы записывать свои тренировки, нужен тариф «Лайт» или «Коуч».": "Щоб записувати власні тренування, потрібен тариф «Лайт» або «Коуч».", "Планы для клиентов доступны в тарифе «Коуч».": "Плани для клієнтів доступні в тарифі «Коуч».", "Планировать тренировки можно в тарифе «Лайт» или «Коуч».": "Планувати тренування можна в тарифі «Лайт» або «Коуч».", "Отправлять планы клиентам можно в тарифе «Коуч».": "Надсилати плани клієнтам можна в тарифі «Коуч».", "Сохранять отчёты клиентов можно в тарифе «Коуч».": "Зберігати звіти клієнтів можна в тарифі «Коуч».", "Оплата работает только внутри Telegram.": "Оплата працює лише всередині Telegram.", "Открываем оплату…": "Відкриваємо оплату…", "Оплата прошла, включаем тариф…": "Оплата пройшла, вмикаємо тариф…", "Оплата не прошла. Попробуйте ещё раз.": "Оплата не пройшла. Спробуйте ще раз.", "Не удалось связаться с сервером оплаты. Проверьте интернет и попробуйте ещё раз.": "Не вдалося зв’язатися з сервером оплати. Перевірте інтернет і спробуйте ще раз."});Object.assign(I18N.en,{"Коуч": "Coach", "Лайт": "Lite", "Тариф": "Plan", "демо": "demo", "Подписка не активна": "No active subscription", "Пробный период": "Free trial", "до ": "until ", "Выбрать тариф": "Choose a plan", "Тарифы": "Plans", "дней": "days", "Активен до ": "Active until ", ", продлится автоматически": ", renews automatically", ", автопродление выключено": ", auto-renewal is off", "Входит в тариф «Коуч»": "Included in Coach", "Оформить за": "Subscribe for", "Тарифы Million": "Million plans", "Сейчас идёт пробный период с полным доступом до ": "Your free trial with full access runs until ", "Это демо: оплата работает только в Telegram.": "This is a demo: payment works only in Telegram.", "Свои тренировки и планы": "Your own workouts and plans", "Таймер отдыха со звуком": "Rest timer with sound", "История, календарь и прогресс": "History, calendar and progress", "Тренировки по планам от тренера": "Workouts from your coach’s plans", "Всё из тарифа «Лайт»": "Everything in Lite", "Планы для клиентов с весами по подходам": "Client plans with per-set weights", "Отправка планов в Telegram": "Send plans via Telegram", "Отчёты клиентов: план и факт": "Client reports: plan vs actual", "Для тренеров": "For coaches", "Оплата в Telegram Stars. Подписка продлевается каждые 30 дней. Отменить можно в Telegram: Настройки → Мои звёзды. Помощь с оплатой: команда /paysupport в боте.": "Paid in Telegram Stars. The subscription renews every 30 days. Cancel any time in Telegram: Settings → My Stars. Payment help: send /paysupport to the bot.", "Чтобы записывать свои тренировки, нужен тариф «Лайт» или «Коуч».": "To log your own workouts you need the Lite or Coach plan.", "Планы для клиентов доступны в тарифе «Коуч».": "Client plans are part of the Coach plan.", "Планировать тренировки можно в тарифе «Лайт» или «Коуч».": "Planning workouts needs the Lite or Coach plan.", "Отправлять планы клиентам можно в тарифе «Коуч».": "Sending plans to clients is part of the Coach plan.", "Сохранять отчёты клиентов можно в тарифе «Коуч».": "Saving client reports is part of the Coach plan.", "Оплата работает только внутри Telegram.": "Payment works only inside Telegram.", "Открываем оплату…": "Opening payment…", "Оплата прошла, включаем тариф…": "Payment received, activating your plan…", "Оплата не прошла. Попробуйте ещё раз.": "Payment failed. Please try again.", "Не удалось связаться с сервером оплаты. Проверьте интернет и попробуйте ещё раз.": "Couldn’t reach the payment server. Check your connection and try again."});
 Object.assign(I18N.uk,{"Ваша заметка": "Ваша нотатка", "Комментарий тренера": "Коментар тренера", "Комментарий к подходу": "Коментар до підходу", "Например: пауза внизу, до отказа": "Наприклад: пауза внизу, до відмови", "Комментарий к упражнению: техника, темп, хват…": "Коментар до вправи: техніка, темп, хват…", "Комментарий к упражнению": "Коментар до вправи", "Комментарий к этому подходу (необязательно)": "Коментар до цього підходу (необов’язково)", "Заметка к упражнению: самочувствие, техника…": "Нотатка до вправи: самопочуття, техніка…", "Заметка к упражнению": "Нотатка до вправи", "Нажмите на подход, чтобы добавить или изменить комментарий.": "Натисніть на підхід, щоб додати або змінити коментар.", "Например: тяжело, болит плечо, лёгкий": "Наприклад: важко, болить плече, легко", "Заметка клиента": "Нотатка клієнта", "<h3>План не помещается в ссылку</h3><p class=\"muted\">Telegram ограничивает длину ссылки. Сократите комментарии или названия упражнений, либо разделите план на два дня.</p><button class=\"btn wide\" data-a=\"close\">Понятно</button>": "<h3>План не вміщується в посилання</h3><p class=\"muted\">Telegram обмежує довжину посилання. Скоротіть коментарі чи назви вправ або розділіть план на два дні.</p><button class=\"btn wide\" data-a=\"close\">Зрозуміло</button>"});Object.assign(I18N.en,{"Ваша заметка": "Your note", "Комментарий тренера": "Coach’s comment", "Комментарий к подходу": "Set comment", "Например: пауза внизу, до отказа": "e.g. pause at the bottom, to failure", "Комментарий к упражнению: техника, темп, хват…": "Exercise comment: technique, tempo, grip…", "Комментарий к упражнению": "Exercise comment", "Комментарий к этому подходу (необязательно)": "Comment for this set (optional)", "Заметка к упражнению: самочувствие, техника…": "Exercise note: how it felt, technique…", "Заметка к упражнению": "Exercise note", "Нажмите на подход, чтобы добавить или изменить комментарий.": "Tap a set to add or edit its comment.", "Например: тяжело, болит плечо, лёгкий": "e.g. hard, shoulder hurts, easy", "Заметка клиента": "Client’s note", "<h3>План не помещается в ссылку</h3><p class=\"muted\">Telegram ограничивает длину ссылки. Сократите комментарии или названия упражнений, либо разделите план на два дня.</p><button class=\"btn wide\" data-a=\"close\">Понятно</button>": "<h3>The plan doesn’t fit into a link</h3><p class=\"muted\">Telegram limits link length. Shorten the comments or exercise names, or split the plan over two days.</p><button class=\"btn wide\" data-a=\"close\">Got it</button>"});
 Object.assign(I18N.uk,{'<div class="meta">рабочих подходов ':'<div class="meta">робочих підходів '});Object.assign(I18N.en,{'<div class="meta">рабочих подходов ':'<div class="meta">working sets '});
@@ -738,7 +740,7 @@ function viewTrain(){
         '<div class="tile"><span class="num">'+(hasEat?fK(et.k):"—")+'</span><small>'+L("ккал съедено")+'</small>'+(hasEat?'<small style="display:block;margin-top:4px">'+L("Б")+' '+fG(et.p)+' · '+L("Ж")+' '+fG(et.f)+' · '+L("У")+' '+fG(et.c)+'</small>':'<small style="display:block;margin-top:4px">'+L("отмечайте приёмы пищи в «Питании»")+'</small>')+'</div>'+
         '<div class="tile"><span class="num">'+(S.bw?(burn?"≈"+fK(burn):"0"):"—")+'</span><small>'+L("ккал сожжено")+'</small>'+(S.bw?"":'<small style="display:block;margin-top:4px">'+L("укажите свой вес выше")+'</small>')+'</div></div>'; })();
   const up=S.plans.filter(p=>p.date>todayKey() && !p.who).slice(0,3);
-  h+='<div class="h2row"><h2>'+L("Запланировано")+'</h2><button class="link" data-a="calopen">'+L("Календарь")+' →</button></div><div class="stack">'+up.map(planCard).join("")+L('<button class="addex" data-a="pnew">+ Запланировать тренировку</button></div>');
+  h+='<div class="h2row"><h2>'+L("Запланировано")+'</h2><button class="link" data-a="calopen">'+L("Календарь")+' →</button></div><div class="stack">'+up.map(planCard).join("")+'<div class="btnrow"><button class="addex" data-a="pnew">'+L("+ Тренировка")+'</button><button class="addex" data-a="genopen">✨ '+L("Программа")+'</button></div></div>';
   const cl=S.plans.filter(p=>p.who);
   h+='<div class="h2row"><h2>'+L("Планы для клиентов")+(cl.length?" · "+cl.length:"")+'</h2>'+(cl.length?'<button class="link" data-a="clhide">'+(S.clHide?L("Показать"):L("Скрыть"))+'</button>':"")+'</div>'+
      '<div class="stack">'+(S.clHide?"":cl.map(planCard).join(""))+L('<button class="addex" data-a="pnew" data-x="client">+ План для клиента</button></div>');
@@ -1620,6 +1622,114 @@ function seedMeals(){
   S.mp.me=newMP("me",{t:{k:2200,p:150,f:65,c:250}}); S.mp.me.d=[0,1,2,3,4,5,6].map(day); saveMP(S.mp.me);
 }
 
+/* ---------- program generator (own training program for several weeks) ---------- */
+const GX={ // exercise library: [ru, uk, en]
+  sq:["Присед со штангой","Присідання зі штангою","Barbell squat"], lp:["Жим ногами","Жим ногами","Leg press"],
+  gs:["Гоблет-присед с гантелью","Гоблет-присідання з гантеллю","Goblet squat"],
+  dl:["Становая тяга","Станова тяга","Deadlift"], rdl:["Румынская тяга","Румунська тяга","Romanian deadlift"],
+  drdl:["Румынская тяга с гантелями","Румунська тяга з гантелями","Dumbbell Romanian deadlift"],
+  bp:["Жим лёжа","Жим лежачи","Bench press"], dbp:["Жим гантелей лёжа","Жим гантелей лежачи","Dumbbell bench press"],
+  idb:["Жим гантелей на наклонной","Жим гантелей на похилій лаві","Incline dumbbell press"], pu:["Отжимания","Віджимання","Push-ups"],
+  ohp:["Жим штанги стоя","Жим штанги стоячи","Overhead press"], dsp:["Жим гантелей сидя","Жим гантелей сидячи","Seated dumbbell press"],
+  row:["Тяга штанги в наклоне","Тяга штанги в нахилі","Barbell row"], crow:["Тяга горизонтального блока","Тяга горизонтального блока","Seated cable row"],
+  drow:["Тяга гантели в наклоне","Тяга гантелі в нахилі","One-arm dumbbell row"],
+  lat:["Тяга верхнего блока","Тяга верхнього блока","Lat pulldown"], pull:["Подтягивания","Підтягування","Pull-ups"],
+  lun:["Выпады с гантелями","Випади з гантелями","Dumbbell lunges"], bss:["Болгарские сплит-приседания","Болгарські спліт-присідання","Bulgarian split squat"],
+  lc:["Сгибание ног в тренажёре","Згинання ніг у тренажері","Leg curl"], le:["Разгибание ног в тренажёре","Розгинання ніг у тренажері","Leg extension"],
+  cal:["Подъёмы на носки","Підйоми на носки","Calf raises"], ht:["Ягодичный мост со штангой","Сідничний міст зі штангою","Hip thrust"],
+  lat2:["Махи гантелями в стороны","Махи гантелями в сторони","Lateral raises"], rd:["Пек дек на заднюю дельту","Пек дек на задню дельту","Reverse pec deck"],
+  bc:["Сгибание рук с гантелями","Згинання рук з гантелями","Dumbbell curls"], tri:["Разгибание рук на блоке","Розгинання рук на блоці","Triceps pushdown"],
+  ab:["Скручивания","Скручування","Crunches"], pl:["Планка, сек","Планка, сек","Plank, sec"]
+};
+const GXH={sq:"gs",lp:"bss",dl:"drdl",rdl:"drdl",bp:"dbp",ohp:"dsp",row:"drow",crow:"drow",lat:"drow",pull:"drow",lc:"drdl",le:"lun",ht:"lun",rd:"lat2",tri:"pu",idb:"dbp"};
+const GXI={ru:0,uk:1,en:2};
+const gxName=k=>GX[k][GXI[LANG]??0];
+/* days: [title, main lifts, accessories] */
+const GSPLIT={
+  fbA:[["Фулбади A","Фулбаді A","Full body A"],["sq","bp","row"],["rdl","lat2","ab"]],
+  fbB:[["Фулбади B","Фулбаді B","Full body B"],["dl","ohp","lat"],["lun","bc","pl"]],
+  fbC:[["Фулбади C","Фулбаді C","Full body C"],["lp","dbp","crow"],["lc","tri","cal"]],
+  up:[["Верх","Верх","Upper"],["bp","row","ohp"],["lat","lat2","bc","tri"]],
+  lo:[["Низ","Низ","Lower"],["sq","rdl"],["lp","lc","cal","ab"]],
+  up2:[["Верх 2","Верх 2","Upper 2"],["ohp","pull","dbp"],["crow","rd","tri","bc"]],
+  lo2:[["Низ 2","Низ 2","Lower 2"],["dl","bss"],["le","ht","cal","pl"]],
+  push:[["Жим","Жим","Push"],["bp","ohp"],["idb","lat2","tri"]],
+  pll:[["Тяга","Тяга","Pull"],["row","lat"],["crow","rd","bc"]],
+  legs:[["Ноги","Ноги","Legs"],["sq","rdl"],["lp","lc","cal"]]
+};
+function gSplit(days,lvl){ return days<=2?["fbA","fbB"]:days===3?(lvl===0?["fbA","fbB","fbC"]:["push","pll","legs"]):days===4?["up","lo","up2","lo2"]:["push","pll","legs","up","lo"]; }
+const GDAYS={2:[0,3],3:[0,2,4],4:[0,1,3,4],5:[0,1,2,4,5]};
+/* sets × reps by goal: [main sets, main reps, acc sets, acc reps] */
+const GSCHEME={str:[5,5,3,8],mass:[4,8,3,12],tone:[3,12,3,15]};
+const RPCT={5:.85,8:.77,10:.72,12:.68,15:.62};
+function gKnown(name){ // estimated 1RM from my history for this exercise name, kg
+  const x=S.ex.findIndex(n=>n.toLowerCase()===name.toLowerCase()); if(x<0) return 0; let best=0;
+  for(const w of S.hist) for(const z of w.sets) if(z[0]===x&&!z[3]&&z[1]>0&&z[2]>0&&z[2]<=15) best=Math.max(best,e1rm(z[1],z[2]));
+  return best; }
+function genProgram(o){ // o: {goal, lvl, days, weeks, home, wd[]}
+  const [ms,mr,as,ar]=GSCHEME[o.goal], extra=o.lvl===2?1:0, setsM=Math.max(3,ms-(o.lvl===0?1:0)+extra), setsA=as+(o.lvl===2?1:0);
+  const split=gSplit(o.days,o.lvl), st=defStep(), out=[];
+  const start=(()=>{ const d=new Date(); d.setHours(0,0,0,0); const back=(d.getDay()+6)%7; return addDays(d,back===0?0:7-back); })();
+  const deload=o.weeks>=6;
+  for(let wk=0;wk<o.weeks;wk++){
+    const last=deload&&wk===o.weeks-1, grow=last?0.9:1+0.025*wk, repAdd=last?0:Math.min(2,Math.floor(wk/2));
+    split.forEach((key,di)=>{
+      const [title,main,acc]=GSPLIT[key]; const d=addDays(start,wk*7+o.wd[di%o.wd.length]);
+      const items=[];
+      const add=(k,isMain)=>{ if(o.home&&GXH[k]) k=GXH[k]; if(items.some(i=>i.k===k)) return;
+        const name=gxName(k), sets=Math.max(2,(isMain?setsM:setsA)-(last?1:0)), reps=isMain?mr:ar;
+        const one=gKnown(name), body=k==="pu"||k==="pull"||k==="pl"||k==="ab";
+        let w=0; if(one&&!body){ w=Math.max(st,Math.round(one*(RPCT[reps]||.7)*grow/st)*st); }
+        const r=k==="pl"?30+10*Math.min(3,wk):(one||body?reps:reps+repAdd);
+        const s=[]; if(isMain&&w>=st*4&&o.goal!=="tone"){ s.push([Math.round(w*.5/st)*st,10,1],[Math.round(w*.7/st)*st,5,1]); }
+        for(let i=0;i<sets;i++) s.push([w,r]);
+        items.push({k,name,s}); };
+      main.slice(0,o.lvl===0?2:main.length).forEach(k=>add(k,true));
+      acc.slice(0,o.lvl===0?2:o.lvl===1?3:acc.length).forEach(k=>add(k,false));
+      out.push({date:dkey(d),name:(LANG==="en"?"Wk ":LANG==="uk"?"Тиж. ":"Нед. ")+(wk+1)+" · "+title[GXI[LANG]??0]+(last?(LANG==="en"?" (deload)":LANG==="uk"?" (розвантаження)":" (разгрузка)"):""),items});
+    });
+  }
+  return out;
+}
+function sheetGen(){
+  const g=S.gen||(S.gen={goal:"mass",lvl:1,days:3,weeks:6,home:false,wd:GDAYS[3].slice()});
+  const seg=(act,cur,opts)=>'<div class="seg" style="grid-template-columns:repeat('+opts.length+',1fr)">'+opts.map(([v,t])=>'<button data-a="'+act+'" data-x="'+v+'" aria-pressed="'+(String(cur)===String(v))+'"><b>'+t+'</b></button>').join("")+'</div>';
+  let h='<h3>'+L("Программа тренировок")+'</h3><p class="muted" style="margin:6px 0 14px">'+L("Приложение составит программу на несколько недель и расставит тренировки в календаре. Потом любую тренировку можно изменить.")+'</p><div class="stack" style="gap:14px">'+
+    '<div><b class="glbl">'+L("Цель")+'</b>'+seg("ggoal",g.goal,[["str",L("Сила")],["mass",L("Масса")],["tone",L("Рельеф")]])+'</div>'+
+    '<div><b class="glbl">'+L("Уровень")+'</b>'+seg("glvl",g.lvl,[[0,L("Новичок")],[1,L("Средний")],[2,L("Опытный")]])+'</div>'+
+    '<div><b class="glbl">'+L("Тренировок в неделю")+'</b>'+seg("gdays",g.days,[[2,"2"],[3,"3"],[4,"4"],[5,"5"]])+'</div>'+
+    '<div><b class="glbl">'+L("Дни недели")+'</b><div class="seg" style="grid-template-columns:repeat(7,1fr)">'+WDS.map((d,i)=>'<button data-a="gwd" data-x="'+i+'" aria-pressed="'+g.wd.includes(i)+'"><b>'+d+'</b></button>').join("")+'</div></div>'+
+    '<div><b class="glbl">'+L("Длительность")+'</b>'+seg("gweeks",g.weeks,[[4,L("4 нед.")],[6,L("6 нед.")],[8,L("8 нед.")]])+'</div>'+
+    '<div><b class="glbl">'+L("Где тренируетесь")+'</b>'+seg("ghome",g.home?1:0,[[0,L("Зал")],[1,L("Дома, гантели")]])+'</div></div>';
+  const ok=g.wd.length===g.days;
+  if(!ok) h+='<div class="err" style="margin-top:10px">'+L("Выберите столько дней, сколько тренировок в неделю: ")+g.days+'</div>';
+  else { const prog=genProgram(g), wk1=prog.slice(0,g.days), known=prog[0].items.some(i=>i.s.some(z=>z[0]>0));
+    h+='<h2 style="margin-top:20px">'+L("Неделя 1")+'</h2><div class="stack">'+wk1.map(p=>'<div class="plan"><div class="eyebrow">'+pdate(p.date)+'</div><b style="font-size:17px">'+esc(p.name.replace(/^[^·]+· /,""))+'</b><ol class="plan-list">'+
+      p.items.map((it,i)=>{ const ws=it.s.filter(z=>!z[2]); return '<li><b>'+(i+1)+'. '+esc(it.name)+'</b><span class="muted" style="font-size:14px">'+ws.length+' × '+ws[0][1]+(ws[0][0]>0?' · '+fw(ws[0][0])+' '+U():"")+(it.s.length>ws.length?' · '+L("+ разминка"):"")+'</span></li>'; }).join("")+'</ol></div>').join("")+'</div>'+
+      '<p class="muted" style="font-size:13px;margin:10px 2px 0">'+(known?L("Веса подобраны по вашей истории тренировок. "):L("Веса не указаны: впишите их в первой тренировке или после пары тренировок пересоздайте программу — веса подберутся по истории. "))+L("Каждую неделю нагрузка немного растёт")+(g.weeks>=6?L(", последняя неделя — разгрузочная."):".")+'</p>'+
+      '<button class="btn primary wide" style="margin-top:14px" data-a="gmake">'+L("Добавить в календарь")+' · '+prog.length+' '+L("трен.")+'</button>';
+    if(S.plans.some(p=>p.gen&&!p.who)) h+='<button class="btn danger wide" style="margin-top:8px" data-a="gclear">'+(S.confirm==="gclear"?L("Нажмите ещё раз"):L("Удалить прошлую сгенерированную программу"))+'</button>';
+  }
+  return h;
+}
+const GEN_A={
+  genopen(){ if(!has("lite")) return need("lite",L("Свои планы тренировок доступны в тарифе «Лайт» или «Коуч»."),()=>{}); S.confirm=null; openSheet(sheetGen(),"gen"); },
+  ggoal(v){ S.gen.goal=v; openSheet(sheetGen(),"gen"); }, glvl(v){ S.gen.lvl=+v; openSheet(sheetGen(),"gen"); },
+  gdays(v){ S.gen.days=+v; S.gen.wd=GDAYS[+v].slice(); openSheet(sheetGen(),"gen"); },
+  gwd(v){ v=+v; const w=S.gen.wd; S.gen.wd=w.includes(v)?w.filter(x=>x!==v):[...w,v].sort((a,b)=>a-b); openSheet(sheetGen(),"gen"); },
+  gweeks(v){ S.gen.weeks=+v; openSheet(sheetGen(),"gen"); }, ghome(v){ S.gen.home=v==="1"; openSheet(sheetGen(),"gen"); },
+  gclear(){ if(S.confirm!=="gclear"){ S.confirm="gclear"; openSheet(sheetGen(),"gen"); return; }
+    const tk=todayKey(); S.plans=S.plans.filter(p=>!(p.gen&&!p.who&&p.date>=tk)); savePlans(); S.confirm=null; haptic("ok"); openSheet(sheetGen(),"gen"); render(); },
+  gcal(){ closeSheet(); A.calopen(); },
+  gmake(){ const g=S.gen; if(g.wd.length!==g.days) return; const prog=genProgram(g), gid="g"+Date.now().toString(36); let added=0,skip=0;
+    for(const p of prog){ if(S.plans.some(x=>x.date===p.date&&!x.who)){ skip++; continue; }
+      const items=p.items.map(it=>{ let x=S.ex.findIndex(n=>n.toLowerCase()===it.name.toLowerCase()); if(x<0){ S.ex.push(it.name); x=S.ex.length-1; } return {x,s:it.s}; });
+      S.plans.push({id:"p"+Date.now().toString(36)+added,date:p.date,name:p.name,items,gen:gid}); added++; }
+    saveEx(); S.plans.sort((a,b)=>a.date<b.date?-1:1); savePlans(); haptic("ok");
+    openSheet('<h3>'+L("Программа готова")+'</h3><p class="muted" style="margin:8px 0 0">'+L("Добавлено тренировок: ")+added+(skip?L(". Пропущено дней, где уже был план: ")+skip:"")+'.</p><button class="btn primary wide" style="margin-top:16px" data-a="gcal">'+L("Открыть календарь")+'</button><button class="btn wide" style="margin-top:8px" data-a="close">'+L("Закрыть")+'</button>',"gendone");
+    render(); }
+};
+
 function sheetConv(kg){
   return L('<h3>Килограммы и фунты</h3><p class="muted" style="margin:6px 0 16px;font-size:14px">1 кг = 2,2046 lb · 1 lb = 0,4536 кг</p>')+
     L('<div class="conv2"><label><span class="flabel">Килограммы</span><input class="field" id="ckg" inputmode="decimal" value="')+r2(kg)+'" autocomplete="off"></label>'+
@@ -1926,6 +2036,7 @@ const A={
 };
 
 Object.assign(A,FOOD_A);
+Object.assign(A,GEN_A);
 Object.assign(A,{
   exk(x){ x=+x; const order=["bar","stack","none"], cur=exKind(x), nx=order[(order.indexOf(cur)+1)%3], old=EXK[S.ex[x]]||"";
     EXK[S.ex[x]]=nx+(old.includes(":")?":"+old.split(":")[1]:""); try{ localStorage.setItem("tb_exk",JSON.stringify(EXK)); }catch(_){} haptic("light"); render(); },
