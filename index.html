@@ -719,7 +719,7 @@ function viewWeek(){
 
 const PEN='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16v4zM13.5 6.5l4 4"/></svg>';
 /* one history: my workouts + every client's reports, filtered by person */
-function histPeople(){ const m=new Map(); for(const r of S.reps){ const k=r.c||L("Клиент"); m.set(k,(m.get(k)||0)+1); } return m; }
+function histPeople(){ const m=new Map(); for(const r of S.reps){ const k=repWho(r); m.set(k,(m.get(k)||0)+1); } return m; }
 function viewHist(){
   const people=histPeople();
   if(S.hf!=="all"&&S.hf!=="me"&&S.hf!=="reps"&&!people.has(S.hf.slice(2))) S.hf="all";
@@ -730,7 +730,7 @@ function viewHist(){
     (people.size>1?chip("reps",L("Все клиенты"),S.reps.length):"")+[...people].map(([c,n])=>chip("c:"+c,esc(c),n)).join("")+'</div>';
   const mine=S.hf==="all"||S.hf==="me", theirs=S.hf!=="me";
   if(S.hf==="me"||!S.reps.length) h+=viewWeek();
-  const rs=S.reps.filter(r=>S.hf==="all"||S.hf==="reps"||(S.hf.startsWith("c:")&&(r.c||L("Клиент"))===S.hf.slice(2)));
+  const rs=S.reps.filter(r=>S.hf==="all"||S.hf==="reps"||(S.hf.startsWith("c:")&&repWho(r)===S.hf.slice(2)));
   if(S.hf.startsWith("c:")&&rs.length){ const st=rs.map(repStats), pc=st.filter(x=>x.pct!=null);
     h+='<div class="tiles" style="margin-top:6px"><div class="tile"><span class="num">'+rs.length+'</span><small>'+L("отчётов")+'</small></div>'+
       '<div class="tile"><span class="num">'+(pc.length?Math.round(pc.reduce((a,x)=>a+x.pct,0)/pc.length)+"%":"—")+'</span><small>'+L("план в среднем")+'</small></div>'+
@@ -867,6 +867,9 @@ function planCard(p){
     '<h3 style="margin-top:4px">'+esc(p.name||L("Тренировка"))+'</h3></div>'+(p.who?"":'<button class="link" data-a="pedit" data-x="'+esc(p.id)+L('">Изменить</button>'))+'</div>'+
     list+tog+act+'</div>';
 }
+/* the client's name as the coach wrote it in the plan (the report carries the client's Telegram name) */
+function repWho(r){ if(r.cw) return r.cw; const p=S.plans.find(p=>p.who&&(p.id===r.pid||p.done===r.id)); return (p&&p.who)||r.c||L("Клиент"); }
+const sameWho=(a,b)=>String(a||"").trim().toLowerCase()===String(b||"").trim().toLowerCase();
 /* in the plan editor: what was actually done last time in this exercise
    (client plan: that client's latest report; own plan: my latest workout) */
 function prevFact(p,x){
@@ -874,8 +877,9 @@ function prevFact(p,x){
   const chipsOf=(sets,pl)=>{ const plw=pl?pl.filter(z=>!z[2]):null;
     return '<div class="sets">'+sets.map(([w,r],i)=>'<span class="chip'+vsPlan(w,r,plw&&plw[i])+'"><i>'+(i+1)+'</i>'+fw(w)+'<b>×</b>'+r+'</span>').join("")+'</div>'; };
   if(p.who!=null){
-    const who=(p.who||"").trim().toLowerCase(); if(!who) return "";
-    for(const r of S.reps){ if((r.c||"").trim().toLowerCase()!==who) continue;
+    if(!(p.who||"").trim()) return "";
+    const own=p.id?S.reps.filter(r=>r.pid===p.id||r.id===p.done):[];
+    for(const r of [...own,...S.reps]){ if(!own.includes(r)&&!sameWho(repWho(r),p.who)&&!sameWho(r.c,p.who)) continue;
       const e=r.e.find(z=>String(z[0]).toLowerCase()===name); if(!e) continue;
       const sets=(e[1]||[]).filter(z=>z[1]>0), cm=(e[1]||[]).map((z,i)=>z[3]?(i+1)+": "+z[3]:"").filter(Boolean);
       return '<div class="prevf"><div class="pfh"><span>'+L("Сделано в прошлый раз")+'</span><span>'+pdate(r.d)+'</span></div>'+
@@ -1615,7 +1619,7 @@ const A={
   racR(){ const x=S._recvR; if(!x) return; if(!has("coach")) return need("coach",L("Сохранять отчёты клиентов можно в тарифе «Коуч»."),()=>{});
     const r=Object.assign({},x.o,{id:"r"+Date.now().toString(36),at:Date.now()});
     S.reps.unshift(r); saveRep(r);
-    const pl=r.pid && S.plans.find(p=>p.id===r.pid && p.who); if(pl){ pl.done=r.id; savePlans(); }
+    const pl=r.pid && S.plans.find(p=>p.id===r.pid && p.who); if(pl){ pl.done=r.id; savePlans(); if(pl.who&&pl.who!==r.c){ r.cw=pl.who; saveRep(r); } }
     S.seen=[x.h,...S.seen].slice(0,30); store.set("seen",JSON.stringify(S.seen));
     S._recvR=null; haptic("ok"); S.tab="train"; render(); S.confirm=null; openSheet(sheetReport(r,"saved"),"rep:"+r.id); },
   ropen(id){ const r=S.reps.find(r=>r.id===id); if(!r) return; S.confirm=null; openSheet(sheetReport(r,"saved"),"rep:"+id); },
@@ -1749,7 +1753,7 @@ function planFromReport(r,useFact){
     items.push(it);
   }
   let d=addDays(fromKey(r.d),7); const today=new Date(); today.setHours(0,0,0,0); while(d<=today) d=addDays(d,7);
-  return {id:null,date:dkey(d),name:r.n||"",who:r.c||"",items,
+  return {id:null,date:dkey(d),name:r.n||"",who:repWho(r),items,
     _src:(useFact?L("Составлено по факту отчёта от "):L("Повтор плана от "))+pdate(r.d)+L(". Проверьте веса и отправьте клиенту.")};
 }
 Object.assign(A,{
