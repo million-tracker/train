@@ -1075,7 +1075,7 @@ function sheetReport(r,mode){
   }
   h+='</div>';
   if(mode==="new") h+=L('<button class="btn primary wide" style="margin-top:16px" data-a="racR">Сохранить отчёт</button><button class="btn wide" style="margin-top:8px" data-a="close">Не сейчас</button>');
-  else if(mode==="saved") h+='<div class="stack" style="margin-top:16px;gap:8px"><button class="btn primary wide" data-a="rnext" data-x="f:'+esc(r.id)+'">'+L("Следующий план по факту")+'</button>'+
+  else if(mode==="saved") h+='<div class="stack" style="margin-top:16px;gap:8px"><button class="btn primary wide" data-a="rnext" data-x="f:'+esc(r.id)+'">'+L("Изменить план")+'</button>'+
       (r.e.some(z=>z[2])?'<button class="btn wide" data-a="rnext" data-x="p:'+esc(r.id)+'">'+L("Повторить этот план")+'</button>':"")+
       '<p class="muted" style="margin:2px 2px 0;font-size:13px">'+L("Откроется новый план для клиента с весами и повторами из отчёта. Поправьте, что нужно (например, +5% к весам), и отправьте.")+'</p></div>'+
       '<button class="btn danger wide" style="margin-top:16px" data-a="rdel" data-x="'+esc(r.id)+'">'+(S.confirm==="rdel"?L("Нажмите ещё раз, чтобы удалить"):L("Удалить отчёт"))+'</button>';
